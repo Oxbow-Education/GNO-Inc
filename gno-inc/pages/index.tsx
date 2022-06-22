@@ -128,6 +128,151 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <div className="p-28">
+        <div className="container mx-auto">
+          <h2 className="text-4xl text-darkBlue text-center font-semibold pb-10">
+            Testimonials Heading
+          </h2>
+          <div className="w-[700px] mx-auto max-w-full">
+            <Tab.Group>
+              <Tab.List className="flex justify-between pb-10">
+                <Tab>
+                  <button className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold">
+                    Jessica: Graphic Designer
+                  </button>
+                </Tab>
+                <Tab>
+                  <button className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold">
+                    Richard: Welder
+                  </button>
+                </Tab>
+                <Tab>
+                  <button className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold">
+                    Tessa: Accountant
+                  </button>
+                </Tab>
+              </Tab.List>
+              <Tab.Panels>
+                <Tab.Panel>
+                  <div className="grid grid-cols-2">
+                    <div className="relative py-10 px-6">
+                      <img
+                        src="images/small-green-dotted@2x.png"
+                        className="absolute bottom-0 left-0 w-32  z-0"
+                      />
+                      <img
+                        className="z-10 relative"
+                        src="images/jessica@2x.png"
+                        alt="Jessica: Graphic Designer"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center p-10">
+                      <h3 className="text-darkBlue text-4xl font-medium">
+                        2020
+                      </h3>
+                      <p className="text-darkBlue text-lg font-semibold">
+                        Tulane Graduate
+                      </p>
+                      <img className="my-2 h-16" src="images/down-arrow.png" />
+                      <h3 className="text-darkBlue text-4xl font-medium">
+                        2021
+                      </h3>
+                      <p className="text-darkBlue text-lg font-semibold">
+                        Ad Agency Internship
+                      </p>
+                      <img className="my-2 h-16" src="images/down-arrow.png" />
+                      <h3 className="text-darkBlue text-4xl font-medium">
+                        2022
+                      </h3>
+                      <p className="text-darkBlue text-lg font-semibold">
+                        Full Time Graphic Designer
+                      </p>
+                    </div>
+                  </div>
+                </Tab.Panel>
+                <Tab.Panel>
+                  <div className="grid grid-cols-2">
+                    <div className="relative py-10 px-6">
+                      <img
+                        src="images/small-green-dotted@2x.png"
+                        className="absolute bottom-0 left-0 w-32  z-0"
+                      />
+                      <img
+                        className="z-10 relative"
+                        src="images/jessica@2x.png"
+                        alt="Jessica: Graphic Designer"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center p-10">
+                      <h3 className="text-darkBlue text-4xl font-medium">
+                        2020
+                      </h3>
+                      <p className="text-darkBlue text-lg font-semibold">
+                        Tulane Graduate
+                      </p>
+                      <img className="my-2 h-16" src="images/down-arrow.png" />
+                      <h3 className="text-darkBlue text-4xl font-medium">
+                        2021
+                      </h3>
+                      <p className="text-darkBlue text-lg font-semibold">
+                        Ad Agency Internship
+                      </p>
+                      <img className="my-2 h-16" src="images/down-arrow.png" />
+                      <h3 className="text-darkBlue text-4xl font-medium">
+                        2022
+                      </h3>
+                      <p className="text-darkBlue text-lg font-semibold">
+                        Full Time Graphic Designer
+                      </p>
+                    </div>
+                  </div>
+                </Tab.Panel>
+                <Tab.Panel>
+                  <div className="grid grid-cols-2">
+                    <div className="relative py-10 px-6">
+                      <img
+                        src="images/small-green-dotted@2x.png"
+                        className="absolute bottom-0 left-0 w-32  z-0"
+                      />
+                      <img
+                        className="z-10 relative"
+                        src="images/jessica@2x.png"
+                        alt="Jessica: Graphic Designer"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center p-10">
+                      <h3 className="text-darkBlue text-4xl font-medium">
+                        2020
+                      </h3>
+                      <p className="text-darkBlue text-lg font-semibold">
+                        Tulane Graduate
+                      </p>
+                      <img className="my-2 h-16" src="images/down-arrow.png" />
+                      <h3 className="text-darkBlue text-4xl font-medium">
+                        2021
+                      </h3>
+                      <p className="text-darkBlue text-lg font-semibold">
+                        Ad Agency Internship
+                      </p>
+                      <img className="my-2 h-16" src="images/down-arrow.png" />
+                      <h3 className="text-darkBlue text-4xl font-medium">
+                        2022
+                      </h3>
+                      <p className="text-darkBlue text-lg font-semibold">
+                        Full Time Graphic Designer
+                      </p>
+                    </div>
+                  </div>
+                </Tab.Panel>
+              </Tab.Panels>
+            </Tab.Group>
+          
+          </div>
+          <button className="block my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] w-auto block h-button font-medium">
+              Explore Careers
+            </button>
+        </div>
+      </div>
     </>
   );
 };

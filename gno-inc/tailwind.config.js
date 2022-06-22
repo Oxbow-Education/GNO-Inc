@@ -34,6 +34,10 @@ module.exports = {
     fontFamily: {
       base: ['apertura', 'sans-serif'],
     },
+    borderWidth: {
+      3: '3px',
+      5: '5px'
+    }
   },
   plugins: [],
 };
