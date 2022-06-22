@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         darkBlue: '#104476',
         orange: '#F26522',
+        lightBlue: '#01ADEE'
       },
       fontSize: {
         '5xl': '70px',
@@ -30,14 +31,19 @@ module.exports = {
       height: {
         button: '70px',
       },
+      boxShadow: {
+        tile: '0px 0px 16px #0000001F'
+      },
+      borderWidth: {
+        3: '3px',
+        5: '5px',
+        10: '10px'
+      }
     },
     fontFamily: {
       base: ['apertura', 'sans-serif'],
     },
-    borderWidth: {
-      3: '3px',
-      5: '5px'
-    }
+   
   },
   plugins: [],
 };

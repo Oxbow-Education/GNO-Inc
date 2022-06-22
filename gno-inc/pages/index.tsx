@@ -288,6 +288,32 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <div className="p-28">
+        <div className="bg-lightBlue rounded-lg p-28">
+          <div className="grid grid-cols-2">
+            <h2 className="text-4xl text-white text-center font-medium pb-10">
+              Lorem ipsum dolor sit amet consectetur.{' '}
+            </h2>
+          </div>
+        </div>
+        <div className="flex justify-between py-28">
+          <div className="shadow-tile rounded-lg border-t-10 border-solid border-darkBlue p-8 flex flex-col h-full justify-between min-w-[450px] min-h-[350px]">
+            <img className="h-32 mx-auto" src="images/gno@2x.png" alt="" />
+            <p className="pt-6 text-center text-darkBlue text-2xl">Developed by</p>
+            <h4 className="text-4xl text-darkBlue text-center font-semibold">GNO, Inc.</h4>
+          </div>
+          <div className="shadow-tile rounded-lg border-t-10 border-solid border-darkBlue p-8 flex flex-col h-full justify-between min-w-[450px] min-h-[350px]">
+            <img className="h-32 mx-auto" src="images/chevron@2x.png" alt="" />
+            <p className="pt-6 text-center text-darkBlue text-2xl">Powered by</p>
+            <h4 className="text-4xl text-darkBlue text-center font-semibold">Chevron</h4>
+          </div>
+          <div className="shadow-tile rounded-lg border-t-10 border-solid border-darkBlue p-8 flex flex-col h-full justify-between min-w-[450px] min-h-[350px]">
+            <img className="h-44 -my-6 mx-auto" src="images/wherewego.png" alt="" />
+            <p className="pt-6 text-center text-darkBlue text-2xl">Built by</p>
+            <h4 className="text-4xl text-darkBlue text-center font-semibold">WhereWeGo</h4>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
