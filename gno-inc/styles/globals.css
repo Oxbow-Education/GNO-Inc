@@ -1,4 +1,490 @@
-@import "https://use.typekit.net/zhb6mex.css";
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * apertura:
+ *   - http://typekit.com/eulas/00000000000000003b9b298a
+ *   - http://typekit.com/eulas/00000000000000003b9b298b
+ *   - http://typekit.com/eulas/00000000000000003b9b298c
+ *   - http://typekit.com/eulas/00000000000000003b9b298d
+ *   - http://typekit.com/eulas/00000000000000003b9b298f
+ *   - http://typekit.com/eulas/00000000000000003b9b298e
+ *   - http://typekit.com/eulas/00000000000000003b9b2990
+ *   - http://typekit.com/eulas/00000000000000003b9b2991
+ * apertura-condensed:
+ *   - http://typekit.com/eulas/00000000000000003b9b2992
+ *   - http://typekit.com/eulas/00000000000000003b9b2993
+ *   - http://typekit.com/eulas/00000000000000003b9b2996
+ *   - http://typekit.com/eulas/00000000000000003b9b2997
+ * chaparral-pro:
+ *   - http://typekit.com/eulas/00000000000000003b9aee4e
+ *   - http://typekit.com/eulas/00000000000000003b9aee4d
+ *   - http://typekit.com/eulas/00000000000000003b9aee52
+ *   - http://typekit.com/eulas/00000000000000003b9aee51
+ *   - http://typekit.com/eulas/00000000000000003b9aee4b
+ *   - http://typekit.com/eulas/00000000000000003b9aee4f
+ * chaparral-pro-caption:
+ *   - http://typekit.com/eulas/00000000000000003b9aee56
+ *   - http://typekit.com/eulas/00000000000000003b9aee55
+ *   - http://typekit.com/eulas/00000000000000003b9aee59
+ *   - http://typekit.com/eulas/00000000000000003b9aee5a
+ * chaparral-pro-display:
+ *   - http://typekit.com/eulas/00000000000000003b9aee62
+ *   - http://typekit.com/eulas/00000000000000003b9aee5d
+ *   - http://typekit.com/eulas/00000000000000003b9aee5e
+ *   - http://typekit.com/eulas/00000000000000003b9aee61
+ * chaparral-pro-subhead:
+ *   - http://typekit.com/eulas/00000000000000003b9aee66
+ *   - http://typekit.com/eulas/00000000000000003b9aee69
+ *   - http://typekit.com/eulas/00000000000000003b9aee6a
+ *   - http://typekit.com/eulas/00000000000000003b9aee65
+ *
+ * © 2009-2022 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2020-02-13 23:07:12 UTC"}*/
+
+@import url('https://p.typekit.net/p.css?s=1&k=zhb6mex&ht=tk&f=608.609.610.611.612.613.614.615.616.617.620.621.6905.6906.6907.6908.6909.6911.6913.6914.6915.13390.6917.6919.13394.13395.6921.13384.13385.13386&a=6924201&app=typekit&e=css');
+
+@font-face {
+  font-family: 'apertura';
+  src: url('https://use.typekit.net/af/a94c5e/00000000000000003b9b298a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/a94c5e/00000000000000003b9b298a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/a94c5e/00000000000000003b9b298a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'apertura';
+  src: url('https://use.typekit.net/af/1618ee/00000000000000003b9b298b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/1618ee/00000000000000003b9b298b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/1618ee/00000000000000003b9b298b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'apertura';
+  src: url('https://use.typekit.net/af/d9ccb7/00000000000000003b9b298c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/d9ccb7/00000000000000003b9b298c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/d9ccb7/00000000000000003b9b298c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'apertura';
+  src: url('https://use.typekit.net/af/08b0ec/00000000000000003b9b298d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/08b0ec/00000000000000003b9b298d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/08b0ec/00000000000000003b9b298d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 500;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'apertura';
+  src: url('https://use.typekit.net/af/f53128/00000000000000003b9b298f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/f53128/00000000000000003b9b298f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/f53128/00000000000000003b9b298f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'apertura';
+  src: url('https://use.typekit.net/af/2bbd4b/00000000000000003b9b298e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/2bbd4b/00000000000000003b9b298e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/2bbd4b/00000000000000003b9b298e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'apertura';
+  src: url('https://use.typekit.net/af/08dc22/00000000000000003b9b2990/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/08dc22/00000000000000003b9b2990/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/08dc22/00000000000000003b9b2990/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'apertura';
+  src: url('https://use.typekit.net/af/1c2844/00000000000000003b9b2991/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/1c2844/00000000000000003b9b2991/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/1c2844/00000000000000003b9b2991/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 800;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'apertura-condensed';
+  src: url('https://use.typekit.net/af/559676/00000000000000003b9b2992/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/559676/00000000000000003b9b2992/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/559676/00000000000000003b9b2992/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'apertura-condensed';
+  src: url('https://use.typekit.net/af/e7e7c5/00000000000000003b9b2993/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/e7e7c5/00000000000000003b9b2993/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/e7e7c5/00000000000000003b9b2993/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'apertura-condensed';
+  src: url('https://use.typekit.net/af/cbe945/00000000000000003b9b2996/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/cbe945/00000000000000003b9b2996/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/cbe945/00000000000000003b9b2996/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'apertura-condensed';
+  src: url('https://use.typekit.net/af/9e6245/00000000000000003b9b2997/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/9e6245/00000000000000003b9b2997/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/9e6245/00000000000000003b9b2997/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro';
+  src: url('https://use.typekit.net/af/9da37c/00000000000000003b9aee4e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/9da37c/00000000000000003b9aee4e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/9da37c/00000000000000003b9aee4e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro';
+  src: url('https://use.typekit.net/af/6d0ba6/00000000000000003b9aee4d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/6d0ba6/00000000000000003b9aee4d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/6d0ba6/00000000000000003b9aee4d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro';
+  src: url('https://use.typekit.net/af/20a4c3/00000000000000003b9aee52/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/20a4c3/00000000000000003b9aee52/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/20a4c3/00000000000000003b9aee52/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro';
+  src: url('https://use.typekit.net/af/4bba43/00000000000000003b9aee51/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/4bba43/00000000000000003b9aee51/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/4bba43/00000000000000003b9aee51/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro';
+  src: url('https://use.typekit.net/af/d07f20/00000000000000003b9aee4b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/d07f20/00000000000000003b9aee4b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/d07f20/00000000000000003b9aee4b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro';
+  src: url('https://use.typekit.net/af/17d530/00000000000000003b9aee4f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/17d530/00000000000000003b9aee4f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/17d530/00000000000000003b9aee4f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-caption';
+  src: url('https://use.typekit.net/af/f30eab/00000000000000003b9aee56/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/f30eab/00000000000000003b9aee56/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/f30eab/00000000000000003b9aee56/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-caption';
+  src: url('https://use.typekit.net/af/f82575/00000000000000003b9aee55/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/f82575/00000000000000003b9aee55/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/f82575/00000000000000003b9aee55/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-caption';
+  src: url('https://use.typekit.net/af/411825/00000000000000003b9aee59/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/411825/00000000000000003b9aee59/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/411825/00000000000000003b9aee59/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-caption';
+  src: url('https://use.typekit.net/af/b5e410/00000000000000003b9aee5a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/b5e410/00000000000000003b9aee5a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/b5e410/00000000000000003b9aee5a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-subhead';
+  src: url('https://use.typekit.net/af/7e3795/00000000000000003b9aee66/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/7e3795/00000000000000003b9aee66/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/7e3795/00000000000000003b9aee66/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-subhead';
+  src: url('https://use.typekit.net/af/be02f1/00000000000000003b9aee69/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/be02f1/00000000000000003b9aee69/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/be02f1/00000000000000003b9aee69/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-subhead';
+  src: url('https://use.typekit.net/af/913150/00000000000000003b9aee6a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/913150/00000000000000003b9aee6a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/913150/00000000000000003b9aee6a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-subhead';
+  src: url('https://use.typekit.net/af/23f94f/00000000000000003b9aee65/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/23f94f/00000000000000003b9aee65/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/23f94f/00000000000000003b9aee65/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-display';
+  src: url('https://use.typekit.net/af/0f0c62/00000000000000003b9aee62/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/0f0c62/00000000000000003b9aee62/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/0f0c62/00000000000000003b9aee62/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-display';
+  src: url('https://use.typekit.net/af/3c06e5/00000000000000003b9aee5d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/3c06e5/00000000000000003b9aee5d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/3c06e5/00000000000000003b9aee5d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-display';
+  src: url('https://use.typekit.net/af/f7f12e/00000000000000003b9aee5e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/f7f12e/00000000000000003b9aee5e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/f7f12e/00000000000000003b9aee5e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'chaparral-pro-display';
+  src: url('https://use.typekit.net/af/b1e17c/00000000000000003b9aee61/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/b1e17c/00000000000000003b9aee61/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/b1e17c/00000000000000003b9aee61/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+.tk-apertura {
+  font-family: 'apertura', sans-serif;
+}
+.tk-apertura-condensed {
+  font-family: 'apertura-condensed', sans-serif;
+}
+.tk-chaparral-pro {
+  font-family: 'chaparral-pro', serif;
+}
+.tk-chaparral-pro-caption {
+  font-family: 'chaparral-pro-caption', serif;
+}
+.tk-chaparral-pro-subhead {
+  font-family: 'chaparral-pro-subhead', serif;
+}
+.tk-chaparral-pro-display {
+  font-family: 'chaparral-pro-display', serif;
+}
 html,
 body {
   padding: 0;
