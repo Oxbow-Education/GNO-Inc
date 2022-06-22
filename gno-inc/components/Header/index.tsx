@@ -5,7 +5,7 @@ interface HeaderProps {}
 const Header: React.FC<HeaderProps> = () => {
   return (
     <header>
-      <div className="container mx-auto flex items-center justify-between p-4">
+      <div className="absolute top-0 left-0 right-0 container mx-auto flex items-center justify-between p-4">
         <div className="h-20">
           <img
             className="h-full"
