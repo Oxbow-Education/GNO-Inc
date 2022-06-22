@@ -1,36 +1,18 @@
-import { Tab, Transition } from '@headlessui/react';
+import { Tab } from '@headlessui/react';
 import { Navigation, A11y } from 'swiper';
 
 import type { NextPage } from 'next';
-import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import BrowserOnly from '../components/BrowserOnly';
 import Header from '../components/Header';
 import React from 'react';
-
-const NUM_PATHWAYS = 2;
+import dynamic from 'next/dynamic';
+const BrowserOnly = dynamic(() => import('../components/BrowserOnly'), {
+  ssr: false,
+});
 const Home: NextPage = () => {
-  const [state, setState] = useState({
-    pathwaysIndex: 0,
-  });
   const pathwaysNextRef = React.useRef<HTMLDivElement>(null);
   const pathwaysPrevRef = React.useRef<HTMLDivElement>(null);
-  const handlePathwayPrevClick = () => {
-    if (state.pathwaysIndex > 0) {
-      setState({ ...state, pathwaysIndex: state.pathwaysIndex - 1 });
-    } else {
-      setState({ ...state, pathwaysIndex: NUM_PATHWAYS });
-    }
-  };
 
-  const handlePathwayNextClick = () => {
-    if (state.pathwaysIndex < NUM_PATHWAYS) {
-      setState({ ...state, pathwaysIndex: state.pathwaysIndex + 1 });
-    } else {
-      setState({ ...state, pathwaysIndex: 0 });
-    }
-  };
-  console.log({ state });
   return (
     <>
       <Header />
@@ -136,20 +118,14 @@ const Home: NextPage = () => {
           <div className="w-[700px] mx-auto max-w-full">
             <Tab.Group>
               <Tab.List className="flex justify-between pb-10">
-                <Tab>
-                  <button className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold">
-                    Jessica: Graphic Designer
-                  </button>
+                <Tab className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold outline-none">
+                  Jessica: Graphic Designer
                 </Tab>
-                <Tab>
-                  <button className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold">
-                    Richard: Welder
-                  </button>
+                <Tab className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold outline-none">
+                  Richard: Welder
                 </Tab>
-                <Tab>
-                  <button className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold">
-                    Tessa: Accountant
-                  </button>
+                <Tab className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold outline-none">
+                  Tessa: Accountant
                 </Tab>
               </Tab.List>
               <Tab.Panels>
@@ -266,11 +242,50 @@ const Home: NextPage = () => {
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
-          
           </div>
           <button className="block my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] w-auto block h-button font-medium">
-              Explore Careers
+            Explore Careers
+          </button>
+          <div className="py-12">
+            <h2 className="text-4xl text-darkBlue text-center font-semibold pb-10">
+              Resources
+            </h2>
+            <div className="grid grid-cols-3 w-[1000px] mx-auto">
+              <div className="flex flex-col items-center justify-between h-full">
+                <img
+                  className="w-40"
+                  src="images/career-counseling@2x.png"
+                  alt="Career Counseling"
+                />
+                <h3 className="text-darkBlue text-2xl font-bold py-6">
+                  Career Counseling
+                </h3>
+              </div>
+              <div className="flex flex-col items-center justify-between h-full">
+                <img
+                  className="w-40"
+                  src="images/childcare@2x.png"
+                  alt="Career Counseling"
+                />
+                <h3 className="text-darkBlue text-2xl font-bold py-6">
+                  Childcare
+                </h3>
+              </div>
+              <div className="flex flex-col items-center justify-between h-full">
+                <img
+                  className="w-40"
+                  src="images/other-support@2x.png"
+                  alt="Career Counseling"
+                />
+                <h3 className="text-darkBlue text-2xl font-bold py-6">
+                  Other Support
+                </h3>
+              </div>
+            </div>
+            <button className="block my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] w-auto block h-button font-medium">
+              Checkout Our Resource Hub
             </button>
+          </div>
         </div>
       </div>
     </>
