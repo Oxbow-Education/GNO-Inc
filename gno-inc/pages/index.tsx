@@ -1,10 +1,10 @@
 import { Tab } from '@headlessui/react';
-import { Navigation, A11y } from 'swiper';
+import { Navigation, A11y, Controller } from 'swiper';
 
 import type { NextPage } from 'next';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import Header from '../components/Header';
-import React from 'react';
+import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Footer from '../components/Footer';
 const BrowserOnly = dynamic(() => import('../components/BrowserOnly'), {
@@ -13,14 +13,15 @@ const BrowserOnly = dynamic(() => import('../components/BrowserOnly'), {
 const Home: NextPage = () => {
   const pathwaysNextRef = React.useRef<HTMLDivElement>(null);
   const pathwaysPrevRef = React.useRef<HTMLDivElement>(null);
+  const [swiper, setSwiper] = useState<any | null>(null);
 
   return (
     <>
       <Header />
-      <div className="h-[900px] pt-[100px]">
-        <div className="container mx-auto h-full">
-          <div className="grid grid-cols-2 h-full">
-            <div className="flex h-full flex-col justify-center">
+      <div className="h-screen py-[100px]">
+        <div className="container mx-auto h-full relative">
+          <div className="block items-center h-full">
+            <div className="flex h-full flex-col justify-center pr-10 shrink-1 w-[50%]">
               <h1 className="text-darkBlue text-5xl leading-heading font-bold pb-8">
                 Greater New Orleans Career Guide
               </h1>
@@ -33,6 +34,13 @@ const Home: NextPage = () => {
                   Take Our Short Quiz
                 </button>
               </div>
+            </div>
+            <div className=" flex justify-start absolute right-0 -bottom-10">
+              <img
+                className="object-contain lg:h-[55vh] xl:h-[65vh] 2xl:h-[70vh]"
+                src="images/banner@2x.png"
+                alt="Images works in the technology and skilled trades industries"
+              />
             </div>
           </div>
         </div>
@@ -50,11 +58,13 @@ const Home: NextPage = () => {
                   className="p-4"
                   direction="horizontal"
                   slidesPerView={1}
-                  modules={[Navigation, A11y]}
+                  modules={[Navigation, A11y, Controller]}
                   navigation={{
-                    nextEl: pathwaysNextRef.current,
-                    prevEl: pathwaysPrevRef.current,
+                    nextEl: pathwaysNextRef?.current,
+                    prevEl: pathwaysPrevRef?.current,
                   }}
+                  onSwiper={(swiper: any) => setSwiper(swiper)}
+                  loop={true}
                 >
                   <SwiperSlide>
                     <img src="images/tulane-litigation@2x.png" />
@@ -67,7 +77,10 @@ const Home: NextPage = () => {
                   </SwiperSlide>
                   <div className="flex items-center navigation">
                     <div
-                      ref={pathwaysPrevRef}
+                      onClick={() => {
+                        if (!swiper) return;
+                        swiper.slidePrev();
+                      }}
                       className="prev bg-orange rounded-button p-5 mr-2 cursor-pointer"
                     >
                       <img
@@ -76,6 +89,10 @@ const Home: NextPage = () => {
                       />
                     </div>
                     <div
+                      onClick={() => {
+                        if (!swiper) return;
+                        swiper.slideNext();
+                      }}
                       ref={pathwaysNextRef}
                       className="next bg-orange rounded-button p-5 ml-2 cursor-pointer"
                     >
@@ -298,7 +315,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="flex justify-between py-28">
-          <div className="shadow-tile rounded-lg border-t-10 border-solid border-darkBlue p-8 flex flex-col h-full justify-between min-w-[450px] min-h-[350px]">
+          <div className="shadow-tile rounded-lg border-t-10 border-solid border-darkBlue p-8 flex flex-col h-full justify-between min-w-[30%] xl:min-w-[450px] min-h-[350px] max-w-[33%]">
             <img className="h-32 mx-auto" src="images/gno@2x.png" alt="" />
             <p className="pt-6 text-center text-darkBlue text-2xl">
               Developed by
@@ -307,7 +324,7 @@ const Home: NextPage = () => {
               GNO, Inc.
             </h4>
           </div>
-          <div className="shadow-tile rounded-lg border-t-10 border-solid border-darkBlue p-8 flex flex-col h-full justify-between min-w-[450px] min-h-[350px]">
+          <div className="shadow-tile rounded-lg border-t-10 border-solid border-darkBlue p-8 flex flex-col h-full justify-between min-w-[30%] xl:min-w-[450px] min-h-[350px] max-w-[33%]">
             <img className="h-32 mx-auto" src="images/chevron@2x.png" alt="" />
             <p className="pt-6 text-center text-darkBlue text-2xl">
               Powered by
@@ -316,7 +333,7 @@ const Home: NextPage = () => {
               Chevron
             </h4>
           </div>
-          <div className="shadow-tile rounded-lg border-t-10 border-solid border-darkBlue p-8 flex flex-col h-full justify-between min-w-[450px] min-h-[350px]">
+          <div className="shadow-tile rounded-lg border-t-10 border-solid border-darkBlue p-8 flex flex-col h-full justify-between min-w-[30%] xl:min-w-[450px] min-h-[350px] ">
             <img
               className="h-44 -my-6 mx-auto"
               src="images/wherewego.png"
