@@ -300,37 +300,37 @@ const Home: NextPage = () => {
             Explore Careers
           </button>
           <div className="pt-12">
-            <h2 className="text-4xl text-darkBlue text-center font-semibold pb-10">
+            <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10">
               Resources
             </h2>
-            <div className="grid grid-cols-3 max-w-full w-[1000px] mx-auto">
+            <div className="grid grid-rows-2 grid-cols-2 md:grid-rows-1 md:grid-cols-3 gap-8 max-w-full w-[1000px] mx-auto">
               <div className="flex flex-col items-center justify-between h-full">
                 <img
-                  className="w-40"
+                  className="md:w-40 w-28"
                   src="images/career-counseling@2x.png"
                   alt="Career Counseling"
                 />
-                <h3 className="text-darkBlue text-2xl font-bold py-6">
+                <h3 className="text-darkBlue text-base md:text-2xl text-center font-bold py-6">
                   Career Counseling
                 </h3>
               </div>
               <div className="flex flex-col items-center justify-between h-full">
                 <img
-                  className="w-40"
+                  className="md:w-40 w-28"
                   src="images/childcare@2x.png"
                   alt="Career Counseling"
                 />
-                <h3 className="text-darkBlue text-2xl font-bold py-6">
+                <h3 className="text-darkBlue text-base md:text-2xl text-center font-bold py-6">
                   Childcare
                 </h3>
               </div>
-              <div className="flex flex-col items-center justify-between h-full">
+              <div className="col-span-2 md:col-auto md:row-auto flex flex-col items-center justify-between h-full">
                 <img
-                  className="w-40"
+                  className="md:w-40 w-28"
                   src="images/other-support@2x.png"
                   alt="Career Counseling"
                 />
-                <h3 className="text-darkBlue text-2xl font-bold py-6">
+                <h3 className="text-darkBlue text-base md:text-2xl text-center font-bold py-6">
                   Other Support
                 </h3>
               </div>

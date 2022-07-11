@@ -41,7 +41,8 @@ module.exports = {
         3: '3px',
         5: '5px',
         10: '10px'
-      }
+      },
+
     },
     fontFamily: {
       base: ['apertura', 'sans-serif'],
