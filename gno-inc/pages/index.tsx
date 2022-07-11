@@ -45,17 +45,16 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-darkBlue p-28">
+      <div className="bg-darkBlue py-16 px-8 md:p-28">
         <div className="container mx-auto">
-          <div className="grid grid-cols-2">
-            <div className="relative pr-10">
+          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-0 gap-8">
+            <div className="relative md:pr-10">
               <img
                 className="absolute top-0 left-0 h-[73%] w-3/4 object-contain"
                 src="images/blue-dotted-background@2x.png"
               />
               <BrowserOnly>
                 <Swiper
-                  className="p-4"
                   direction="horizontal"
                   slidesPerView={1}
                   modules={[Navigation, A11y, Controller]}
@@ -70,10 +69,10 @@ const Home: NextPage = () => {
                     <img src="images/tulane-litigation@2x.png" />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="images/tulane-litigation@2x.png" />
+                    <img src="images/nocc-electrician@2x.png" />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="images/tulane-litigation@2x.png" />
+                    <img src="images/uno-business@2x.png" />
                   </SwiperSlide>
                   <div className="flex items-center navigation">
                     <div
@@ -105,8 +104,8 @@ const Home: NextPage = () => {
                 </Swiper>
               </BrowserOnly>
             </div>
-            <div className="w-full flex flex-col justify-center pl-10">
-              <h2 className="text-white text-4xl font-medium leading-heading2 pb-6">
+            <div className="w-full flex flex-col justify-center lg:pl-10">
+              <h2 className="text-white text-3xl md:text-4xl font-medium leading-10 md:leading-heading3 xl:leading-heading2 pb-6">
                 Great Careers. <br /> Straightforward pathways.
               </h2>
               <p className="text-white text-lg font-thin pb-6">
@@ -116,11 +115,11 @@ const Home: NextPage = () => {
                 check out what it takes to enter some of the fastest growing
                 careers in the New Orleans region.
               </p>
-              <div className="flex">
-                <button className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mr-2">
+              <div className="flex flex-col md:flex-row">
+                <button className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2">
                   Take Our Short Quiz
                 </button>
-                <button className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium ml-2">
+                <button className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2">
                   See All Careers
                 </button>
               </div>
