@@ -22,14 +22,14 @@ const Home: NextPage = () => {
         <div className="container mx-auto h-full relative px-10">
           <div className="md:grid grid-cols-2 items-center h-full">
             <div className="flex h-full flex-col justify-center md:-mr-18">
-              <h1 className="text-darkBlue text-3xl lg:text-4.5xl  2xl:text-5xl leading-10 lg:leading-heading3 2xl:leading-heading font-bold pb-8">
+              <h1 className="text-center  md:text-left text-darkBlue text-3xl lg:text-4.5xl  2xl:text-5xl leading-10 lg:leading-heading3 2xl:leading-heading font-bold pb-8">
                 Greater New Orleans Career Guide
               </h1>
-              <p className="text-2xl leading-copy font-extralight">
+              <p className="md:text-left text-center text-2xl leading-copy font-extralight">
                 Explore the great careers our region has to offer, and the
                 education pathways to get there.
               </p>
-              <div className="my-8">
+              <div className="mx-auto md:mx-0 my-8">
                 <button className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium">
                   Take Our Short Quiz
                 </button>
