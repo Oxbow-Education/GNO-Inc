@@ -4,7 +4,7 @@ import { Navigation, A11y, Controller } from 'swiper';
 import type { NextPage } from 'next';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import Header from '../components/Header';
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Footer from '../components/Footer';
 const BrowserOnly = dynamic(() => import('../components/BrowserOnly'), {
@@ -127,27 +127,63 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="p-28">
+      <div className="py-16 px-8 md:p-28">
         <div className="container mx-auto">
-          <h2 className="text-4xl text-darkBlue text-center font-semibold pb-10">
+          <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10">
             Testimonials Heading
           </h2>
           <div className="w-[700px] mx-auto max-w-full">
             <Tab.Group>
-              <Tab.List className="flex justify-between pb-10">
-                <Tab className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold outline-none">
-                  Jessica: Graphic Designer
+              <Tab.List className="flex flex-col md:flex-row justify-between px-8 md:px-0 pb-10">
+                <Tab as={Fragment}>
+                  {({ selected }) => {
+                    return (
+                      <button
+                        className={`${
+                          selected
+                            ? 'border-orange text-orange'
+                            : 'border-transparent text-darkBlue '
+                        } font-semibold outline-none border-5 border-dashed rounded-button px-4 py-2 my-2`}
+                      >
+                        Jessica: Graphic Designer
+                      </button>
+                    );
+                  }}
                 </Tab>
-                <Tab className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold outline-none">
-                  Richard: Welder
+                <Tab as={Fragment}>
+                  {({ selected }) => {
+                    return (
+                      <button
+                        className={`${
+                          selected
+                            ? 'border-orange text-orange'
+                            : 'border-transparent text-darkBlue '
+                        } font-semibold outline-none border-5 border-dashed rounded-button px-4 py-2 my-2`}
+                      >
+                        Richard: Welder
+                      </button>
+                    );
+                  }}
                 </Tab>
-                <Tab className="border-5 border-dashed border-orange rounded-button px-4 py-2 text-orange font-semibold outline-none">
-                  Tessa: Accountant
+                <Tab as={Fragment}>
+                  {({ selected }) => {
+                    return (
+                      <button
+                        className={`${
+                          selected
+                            ? 'border-orange text-orange'
+                            : 'border-transparent text-darkBlue '
+                        } font-semibold outline-none border-5 border-dashed rounded-button px-4 py-2 my-2`}
+                      >
+                        Tessa: Accountant
+                      </button>
+                    );
+                  }}
                 </Tab>
               </Tab.List>
               <Tab.Panels>
                 <Tab.Panel>
-                  <div className="grid grid-cols-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="relative py-10 px-6">
                       <img
                         src="images/small-green-dotted@2x.png"
@@ -184,7 +220,7 @@ const Home: NextPage = () => {
                   </div>
                 </Tab.Panel>
                 <Tab.Panel>
-                  <div className="grid grid-cols-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="relative py-10 px-6">
                       <img
                         src="images/small-green-dotted@2x.png"
@@ -221,7 +257,7 @@ const Home: NextPage = () => {
                   </div>
                 </Tab.Panel>
                 <Tab.Panel>
-                  <div className="grid grid-cols-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="relative py-10 px-6">
                       <img
                         src="images/small-green-dotted@2x.png"
@@ -260,7 +296,7 @@ const Home: NextPage = () => {
               </Tab.Panels>
             </Tab.Group>
           </div>
-          <button className="block my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] w-auto block h-button font-medium">
+          <button className="block my-4 md:my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] w-auto block h-button font-medium">
             Explore Careers
           </button>
           <div className="pt-12">
