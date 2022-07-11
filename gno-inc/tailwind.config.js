@@ -9,10 +9,12 @@ module.exports = {
       colors: {
         darkBlue: '#104476',
         orange: '#F26522',
-        lightBlue: '#01ADEE'
+        lightBlue: '#01ADEE',
+        white: 'white'
       },
       fontSize: {
-        '5xl': '70px',
+        '5xl': '60px',
+        '4.5xl': '55px',
         '4xl': '40px',
         '2xl': '25px',
         'lg': '18px;'
@@ -20,7 +22,8 @@ module.exports = {
       lineHeight: {
         copy: '33px',
         heading: '75px',
-        heading2: '60px'
+        heading2: '60px',
+        heading3: '55px'
       },
       minWidth: {
         button: '200px',

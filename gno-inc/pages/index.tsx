@@ -18,11 +18,11 @@ const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <div className="h-screen py-[100px]">
-        <div className="container mx-auto h-full relative">
-          <div className="block items-center h-full">
-            <div className="flex h-full flex-col justify-center pr-10 shrink-1 w-[50%]">
-              <h1 className="text-darkBlue text-5xl leading-heading font-bold pb-8">
+      <div className="lg:h-screen py-[100px]">
+        <div className="container mx-auto h-full relative px-10">
+          <div className="md:grid grid-cols-2 items-center h-full">
+            <div className="flex h-full flex-col justify-center md:-mr-18">
+              <h1 className="text-darkBlue text-3xl lg:text-4.5xl  2xl:text-5xl leading-10 lg:leading-heading3 2xl:leading-heading font-bold pb-8">
                 Greater New Orleans Career Guide
               </h1>
               <p className="text-2xl leading-copy font-extralight">
@@ -35,10 +35,10 @@ const Home: NextPage = () => {
                 </button>
               </div>
             </div>
-            <div className=" flex justify-start absolute right-0 -bottom-10">
+            <div className="flex justify-end flex-col h-full md:-ml-20">
               <img
-                className="object-contain lg:h-[55vh] xl:h-[65vh] 2xl:h-[70vh]"
-                src="images/banner@2x.png"
+                className="object-contain w-full"
+                src="https://res.cloudinary.com/wherewego/image/upload/v1657317389/WWG2000%20Site%20Photos/hl6bljfiwtgv3vabmonk.png"
                 alt="Images works in the technology and skilled trades industries"
               />
             </div>
@@ -268,7 +268,7 @@ const Home: NextPage = () => {
             <h2 className="text-4xl text-darkBlue text-center font-semibold pb-10">
               Resources
             </h2>
-            <div className="grid grid-cols-3 w-[1000px] mx-auto">
+            <div className="grid grid-cols-3 max-w-full w-[1000px] mx-auto">
               <div className="flex flex-col items-center justify-between h-full">
                 <img
                   className="w-40"
@@ -306,7 +306,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="px-28">
+      {/* <div className="px-28">
         <div className="bg-lightBlue rounded-lg p-28">
           <div className="grid grid-cols-2">
             <h2 className="text-4xl text-white text-center font-medium pb-10">
@@ -345,7 +345,7 @@ const Home: NextPage = () => {
             </h4>
           </div>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </>
   );
