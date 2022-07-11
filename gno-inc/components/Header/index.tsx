@@ -10,15 +10,24 @@ const Header: React.FC<HeaderProps> = () => {
     <header>
       <div className="absolute top-0 left-0 right-0 container mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between p-4 z-20 w-screen bg-white">
         <div className="w-3/4 lg:w-[550px] 2xl:w-[700px]">
-          <img src="images/gno-inc-logo@2x.png" alt="GNO Inc logo" />
+          <img
+            className="hidden lg:block"
+            src="images/gno-inc-logo@2x.png"
+            alt="GNO Inc logo"
+          />
+          <img
+            className="block lg:hidden max-h-14"
+            src="images/career-guide-logo-small@2x.png"
+            alt="GNO Inc logo"
+          />
         </div>
         <MenuIcon
           onClick={() => setNavIsOpen(!navIsOpen)}
-          className="fill-darkBlue h-8 w-8 lg:hidden block absolute right-0 top-6"
+          className="fill-darkBlue h-8 w-8 lg:hidden block absolute right-6 top-6 outline-none"
         />
 
         <nav
-          className={`lg:flex-1 mx-8 w-full ${
+          className={`lg:flex-1 lg:mx-8 w-full ${
             navIsOpen ? 'h-auto' : 'h-0 lg:h-auto overflow-hidden'
           }`}
         >
