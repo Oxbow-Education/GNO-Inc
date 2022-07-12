@@ -10,7 +10,9 @@ module.exports = {
         darkBlue: '#104476',
         orange: '#F26522',
         lightBlue: '#01ADEE',
-        white: 'white'
+        mdBlue: '#009FDB',
+        white: 'white',
+        red: 'red'
       },
       fontSize: {
         '5xl': '60px',
@@ -42,7 +44,9 @@ module.exports = {
         5: '5px',
         10: '10px'
       },
-
+      gridTemplateRows: {
+        contact: '100px auto'
+      }
     },
     fontFamily: {
       base: ['apertura', 'sans-serif'],
