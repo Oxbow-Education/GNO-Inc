@@ -40,6 +40,7 @@ module.exports = {
         tile: '0px 0px 16px #0000001F'
       },
       borderWidth: {
+        1: '1px',
         3: '3px',
         5: '5px',
         10: '10px'
