@@ -46,6 +46,10 @@ module.exports = {
       },
       gridTemplateRows: {
         contact: '100px auto'
+      },
+      gridTemplateColumns: {
+        contact: '2fr 3fr',
+        mdContact: '4fr 6fr'
       }
     },
     fontFamily: {

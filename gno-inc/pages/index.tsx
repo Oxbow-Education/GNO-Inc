@@ -18,6 +18,7 @@ import Footer from '../components/Footer';
 const EMAIL_VALIDATION_REG_EXP = new RegExp(
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 );
+import axios from 'axios';
 
 const BrowserOnly = dynamic(() => import('../components/BrowserOnly'), {
   ssr: false,
@@ -70,7 +71,7 @@ const Banner = () => {
 };
 const Testimonials = () => {
   return (
-    <div className="py-16 px-8 md:p-28">
+    <div className="py-10 px-8 md:p-28">
       <div className="container mx-auto">
         <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10">
           Testimonials Heading
@@ -140,17 +141,17 @@ const Testimonials = () => {
                   </div>
                   <div className="flex flex-col items-center p-10">
                     <h3 className="text-darkBlue text-4xl font-medium">2020</h3>
-                    <p className="text-darkBlue text-lg font-semibold">
+                    <p className="text-darkBlue text-lg font-semibold text-center">
                       Tulane Graduate
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2021</h3>
-                    <p className="text-darkBlue text-lg font-semibold">
+                    <p className="text-darkBlue text-lg font-semibold text-center">
                       Ad Agency Internship
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2022</h3>
-                    <p className="text-darkBlue text-lg font-semibold">
+                    <p className="text-darkBlue text-lg font-semibold text-center">
                       Full Time Graphic Designer
                     </p>
                   </div>
@@ -171,17 +172,17 @@ const Testimonials = () => {
                   </div>
                   <div className="flex flex-col items-center p-10">
                     <h3 className="text-darkBlue text-4xl font-medium">2020</h3>
-                    <p className="text-darkBlue text-lg font-semibold">
+                    <p className="text-darkBlue text-lg font-semibold text-center">
                       Tulane Graduate
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2021</h3>
-                    <p className="text-darkBlue text-lg font-semibold">
+                    <p className="text-darkBlue text-lg font-semibold text-center">
                       Ad Agency Internship
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2022</h3>
-                    <p className="text-darkBlue text-lg font-semibold">
+                    <p className="text-darkBlue text-lg font-semibold text-center">
                       Full Time Graphic Designer
                     </p>
                   </div>
@@ -202,17 +203,17 @@ const Testimonials = () => {
                   </div>
                   <div className="flex flex-col items-center p-10">
                     <h3 className="text-darkBlue text-4xl font-medium">2020</h3>
-                    <p className="text-darkBlue text-lg font-semibold">
+                    <p className="text-darkBlue text-lg font-semibold text-center">
                       Tulane Graduate
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2021</h3>
-                    <p className="text-darkBlue text-lg font-semibold">
+                    <p className="text-darkBlue text-lg font-semibold text-center">
                       Ad Agency Internship
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2022</h3>
-                    <p className="text-darkBlue text-lg font-semibold">
+                    <p className="text-darkBlue text-lg font-semibold text-center">
                       Full Time Graphic Designer
                     </p>
                   </div>
@@ -221,10 +222,10 @@ const Testimonials = () => {
             </Tab.Panels>
           </Tab.Group>
         </div>
-        <button className="block my-4 md:my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] w-auto block h-button font-medium">
+        <button className="block my-4 md:my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] w-auto block h-button font-medium max-w-full">
           Explore Careers
         </button>
-        <div className="pt-12">
+        <div className="pt-24">
           <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10">
             Resources
           </h2>
@@ -260,7 +261,7 @@ const Testimonials = () => {
               </h3>
             </div>
           </div>
-          <button className="block my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] w-auto block h-button font-medium">
+          <button className="block my-10 mx-auto rounded-button bg-orange text-white max-w-full min-w-button w-[267px] w-auto block h-button font-medium">
             Checkout Our Resource Hub
           </button>
         </div>
@@ -277,7 +278,7 @@ const CareerSwiper = () => {
     <div className="bg-darkBlue py-16 px-8 md:p-28">
       <div className="container mx-auto">
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-0 gap-8">
-          <div className="relative md:pr-10">
+          <div className="relative py-10 md:py-0 md:pr-10">
             <img
               className="absolute top-0 left-0 h-[73%] w-3/4 object-contain"
               src="images/blue-dotted-background@2x.png"
@@ -303,7 +304,7 @@ const CareerSwiper = () => {
                 <SwiperSlide>
                   <img src="images/uno-business@2x.png" />
                 </SwiperSlide>
-                <div className="flex items-center navigation">
+                <div className="flex items-center navigation my-6 md:my-0">
                   <div
                     onClick={() => {
                       if (!swiper) return;
@@ -360,10 +361,10 @@ const CareerSwiper = () => {
 };
 
 const ContactForm = () => {
-  const nameInputRef = useRef<HTMLInputElement>(null);
-  const emailInputRef = useRef<HTMLInputElement>(null);
-  const messageInputRef = useRef<HTMLTextAreaElement>(null);
-  const formRef = useRef<HTMLFormElement>(null);
+  const [formResponse, setFormResponse] = useState<{
+    error: boolean;
+    message: string;
+  } | null>(null);
   const [formState, setFormState] = useState({
     name: {
       value: '',
@@ -388,20 +389,27 @@ const ContactForm = () => {
     },
   });
 
-  const handleNameChange = () => {};
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    formRef.current?.classList.add('submitted');
     const isValid = validateForm();
-    console.log(isValid);
     if (!isValid) return;
+    const data = {
+      name: formState.name.value,
+      email: formState.email.value,
+      message: formState.message.value,
+    };
+    const response = await axios
+      .post('/api/email', data)
+      .then((res) => res.data)
+      .catch((err) => err.response.data);
+
+    setFormResponse(response);
   };
 
   const validateForm = (): boolean => {
     const fields = Object.keys(formState) as ('name' | 'email' | 'message')[];
     let isValid = true;
     fields.forEach((field) => {
-      console.log(field, formState);
       if (formState[field].required && !formState[field].value) {
         formState[field].error = true;
         formState[field].errorMessage = 'This field is required.';
@@ -416,68 +424,86 @@ const ContactForm = () => {
       } else {
         formState[field].error = false;
       }
-      console.log(formState);
     });
     setFormState({ ...formState });
 
     return isValid;
   };
 
+  useEffect(() => {
+    console.log(formResponse);
+  }, [formResponse]);
+
   return (
-    <div className="container mx-auto my-32">
-      <div className="grid grid-rows-contact grid-cols-2">
-        <div className="bg-lightBlue p-20 col-start-1 col-end-3 row-start-2 row-end-3 rounded-2xl grid grid-rows-1 grid-cols-2">
-          <div className="px-20">
-            <h2 className="text-4xl text-white font-semibold">
+    <div className="container mx-auto my-10 md:my-32">
+      <div className="flex flex-col lg:grid grid-rows-contact grid-cols-contact relative">
+        <div className="bg-lightBlue mx-6 px-6 pt-6 pb-0 lg:p-20 col-start-1 col-end-3 row-start-2 row-end-3 rounded-2xl flex flex-col lg:grid grid-rows-1 grid-cols-contact">
+          <div className="pr-6">
+            <h2 className="text-2xl lg:text-4xl text-white font-semibold">
               Lorem ipsum dolor sit amet consectetur.
             </h2>
-            <form ref={formRef} className="py-10" onSubmit={handleSubmit}>
+            {formResponse && (
+              <p
+                className={`${
+                  formResponse.error
+                    ? 'bg-red/50 text-white'
+                    : 'bg-white text-lightBlue'
+                } mt-6 p-4 font-semibold`}
+              >
+                {formResponse.message}
+              </p>
+            )}
+            <form className="py-8 pb-10" onSubmit={handleSubmit}>
               <input
-                ref={nameInputRef}
-                onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                  setFormState((formState) => {
-                    formState.name.value = event.target.value;
-                    return formState;
-                  })
-                }
+                value={formState.name.value}
+                onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                  formState.name.value = event.target.value;
+                  setFormState({ ...formState });
+                }}
                 type="text"
-                className={`rounded-lg p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
+                className={`rounded-lg p-4 lg:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
                 ${formState.name.error ? 'bg-red/50' : 'bg-mdBlue'}
                 `}
                 placeholder="Your Name"
               />
-              {formState.name.error && <p>{formState.name.errorMessage}</p>}
+              {formState.name.error && (
+                <p className="text-sm font-semibold text-red/50">
+                  {formState.name.errorMessage}
+                </p>
+              )}
               <input
-                ref={emailInputRef}
-                onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                  setFormState((formState) => {
-                    formState.email.value = event.target.value;
-                    return formState;
-                  })
-                }
+                value={formState.email.value}
+                onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                  formState.email.value = event.target.value;
+                  setFormState({ ...formState });
+                }}
                 type="text"
-                className={`rounded-lg p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
+                className={`rounded-lg p-4 lg:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
                 ${formState.email.error ? 'bg-red/50' : 'bg-mdBlue'}
                 `}
                 placeholder="Your Email"
               />
-              {formState.email.error && <p>{formState.email.errorMessage}</p>}
+              {formState.email.error && (
+                <p className="text-sm font-semibold text-red/50">
+                  {formState.email.errorMessage}
+                </p>
+              )}
               <textarea
-                ref={messageInputRef}
-                onChange={(event: ChangeEvent<HTMLTextAreaElement>) =>
-                  setFormState((formState) => {
-                    formState.message.value = event.target.value;
-                    return formState;
-                  })
-                }
-                className={`rounded-lg p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
+                value={formState.message.value}
+                onChange={(event: ChangeEvent<HTMLTextAreaElement>) => {
+                  formState.message.value = event.target.value;
+                  setFormState({ ...formState });
+                }}
+                className={`rounded-lg p-4 lg:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
                 ${formState.message.error ? 'bg-red/50' : 'bg-mdBlue'}
                 `}
                 placeholder="Message"
                 rows={8}
               ></textarea>
               {formState.message.error && (
-                <p>{formState.message.errorMessage}</p>
+                <p className="text-sm font-semibold text-red/50">
+                  {formState.message.errorMessage}
+                </p>
               )}
               <button
                 type="submit"
@@ -487,10 +513,19 @@ const ContactForm = () => {
               </button>
             </form>
           </div>
+          <div className="block lg:hidden col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
+            <img
+              className="h-full object-contain"
+              src="images/email-graphic@2x.png"
+            />
+          </div>
         </div>
 
-        <div className="col-start-2 col-end-3 row-start-1 row-end-3 px-20">
-          <img src="images/email-graphic@2x.png" />
+        <div className="hidden lg:block col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
+          <img
+            className="h-full object-contain"
+            src="images/email-graphic@2x.png"
+          />
         </div>
       </div>
     </div>

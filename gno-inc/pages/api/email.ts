@@ -5,10 +5,11 @@ type Data = {
   message: string;
 };
 export default async function handler(
-  _req: NextApiRequest,
+  req: NextApiRequest,
   res: NextApiResponse<Data>,
 ) {
-  sendEmail()
+  const { body } = req;
+  sendEmail(body)
     .then(() => {
       res.status(200);
       res.send({
