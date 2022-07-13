@@ -435,7 +435,7 @@ const ContactForm = () => {
   }, [formResponse]);
 
   return (
-    <div className="container mx-auto my-10 md:my-32">
+    <div className="container mx-auto my-10 md:my-10">
       <div className="flex flex-col lg:grid grid-rows-contact grid-cols-contact relative">
         <div className="bg-lightBlue mx-6 px-6 pt-6 pb-0 lg:p-20 col-start-1 col-end-3 row-start-2 row-end-3 rounded-2xl flex flex-col lg:grid grid-rows-1 grid-cols-contact">
           <div className="lg:pr-6">
