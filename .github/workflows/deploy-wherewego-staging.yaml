@@ -1,0 +1,88 @@
+name: Build Staging docker image and deploy to azure container
+concurrency: wwg-staging
+
+on:
+  push:
+    branches:
+      - staging
+  workflow_dispatch:
+
+env:
+  BRANCH: staging
+
+jobs:
+  build_landing:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '#deployonly')"
+    env:
+      REPO: wwg_gno
+      DOCKERFILE: ./deployment/Dockerfile
+
+    steps:
+      - name: Checkout Staging Branch
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ env.BRANCH }}
+          fetch-depth: 0
+
+      - name: Build and push image to registry
+        uses: nikkag/build-docker-push-azure-action@main
+        with:
+          acr_username: ${{ secrets.ACR_TOKEN_NAME }}
+          acr_password: ${{ secrets.ACR_TOKEN_VALUE }}
+          registry: wherewego
+          repo: ${{ env.REPO }}
+          dockerfile: ${{ env.DOCKERFILE }}
+          version_tag: latest
+
+  deploy_group:
+    runs-on: ubuntu-latest
+    needs: [build_landing]
+    if: always()
+    env:
+      DEPLOY_FILE: deployment/deploy-azure-staging.yaml
+      NGINX_FILE: deployment/nginx.conf
+
+    steps:
+      - name: Fail if needed jobs fail without deployonly tag
+        if: ${{ contains(needs.*.result, 'failure') && !contains(github.event.head_commit.message, '#deployonly')}}
+        run: exit 1
+
+      - name: Checkout Staging Branch
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ env.BRANCH }}
+          fetch-depth: 0
+
+      - name: Encode Nginx Conf
+        run: echo "NGINX_CONF=$(cat ${{ env.NGINX_FILE }} | base64 -w 0)" >> $GITHUB_ENV
+
+      - name: Login via Azure CLI
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: 'Replace variables in deployment script'
+        uses: cschleiden/replace-tokens@v1
+        with:
+          files: "${{ env.DEPLOY_FILE }}"
+        env:
+          GNO_VERSION: latest
+          SSL_CERT: ${{ secrets.SSL_CERT }}
+          SSL_KEY: ${{ secrets.SSL_KEY }}
+          ACR_TOKEN_NAME: ${{ secrets.ACR_TOKEN_NAME }}
+          ACR_TOKEN_VALUE: ${{ secrets.ACR_TOKEN_VALUE }}
+          NGINX_CONF: ${{ env.NGINX_CONF }}
+
+      - name: Deploy to Azure Container Instances
+        run: az container create -g wwg --file ${{ env.DEPLOY_FILE }}
+
+      # Remove below when we start versioning
+      - name: Restart containers
+        run: az container restart -g wwg --name wherewegocms-with-ssl
+
+      - name: Purge old images from registry
+        run: az acr run -g wwg --cmd "${{ env.purge_cmd }}" --registry wherewego  --timeout 360 /dev/null
+        env:
+          # TODO - Update number for keep once we begin versioning
+          purge_cmd: "acr purge --filter 'wwg_gno:.*' --ago 90d --keep 2 --untagged"
