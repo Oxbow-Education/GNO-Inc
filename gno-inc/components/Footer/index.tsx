@@ -84,7 +84,7 @@ const Footer: React.FC<FooterProps> = () => {
           </div>
           <div className="md:py-10 grid grid-rows-3 items-center justify-center md:justify-end">
             <img
-              className="h-20 lg:h-28 mx-auto md:ml-auto"
+              className="h-20 lg:h-28 ml-auto md:mr-0 mr-auto"
               src="images/Chevron_Logo@2x.png"
               alt="Chrevron Logo"
             />
