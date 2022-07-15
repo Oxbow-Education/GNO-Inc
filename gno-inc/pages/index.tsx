@@ -53,11 +53,13 @@ const Banner = () => {
               education pathways to get there.
             </p>
             <div className="mx-auto md:mx-0 my-8">
-              <Link
-                href="/training/careers/quiz"
-                className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium"
-              >
-                Take Our Short Quiz
+              <Link href="/training/careers/quiz">
+                <a
+                  className="rounded-button bg-orange text-white min-w-button w-[222px] max-w-full block h-button font-medium flex items-center justify-center"
+                  href="/training/careers/quiz"
+                >
+                  Take Our Short Quiz
+                </a>
               </Link>
             </div>
           </div>
@@ -265,7 +267,7 @@ const Testimonials = () => {
               </h3>
             </div>
           </div>
-          <button className="block my-10 mx-auto rounded-button bg-orange text-white max-w-full min-w-button w-[267px] w-auto block h-button font-medium">
+          <button className="block my-10 mx-auto rounded-button bg-orange text-white max-w-full min-w-button w-[267px] md:w-auto block h-button font-medium">
             Checkout Our Resource Hub
           </button>
         </div>
@@ -350,17 +352,21 @@ const CareerSwiper = () => {
               New Orleans region.
             </p>
             <div className="flex flex-col md:flex-row">
-              <Link
-                href="/training/careers/quiz"
-                className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2"
-              >
-                Take Our Short Quiz
+              <Link href="/training/careers/quiz">
+                <a
+                  href="/training/careers/quiz"
+                  className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2 flex items-center justify-center"
+                >
+                  Take Our Short Quiz
+                </a>
               </Link>
-              <Link
-                href="/training/careers"
-                className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2"
-              >
-                See All Careers
+              <Link href="/training/careers">
+                <a
+                  className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2 flex items-center justify-center"
+                  href="/training/careers"
+                >
+                  See All Careers
+                </a>
               </Link>
             </div>
           </div>
