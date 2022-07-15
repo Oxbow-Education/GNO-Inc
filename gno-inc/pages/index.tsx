@@ -19,6 +19,7 @@ const EMAIL_VALIDATION_REG_EXP = new RegExp(
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 );
 import axios from 'axios';
+import Link from 'next/link';
 
 const BrowserOnly = dynamic(() => import('../components/BrowserOnly'), {
   ssr: false,
@@ -52,9 +53,12 @@ const Banner = () => {
               education pathways to get there.
             </p>
             <div className="mx-auto md:mx-0 my-8">
-              <button className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium">
+              <Link
+                href="/training/careers/quiz"
+                className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium"
+              >
                 Take Our Short Quiz
-              </button>
+              </Link>
             </div>
           </div>
           <div className="flex justify-end flex-col h-full md:-ml-20">
@@ -346,12 +350,18 @@ const CareerSwiper = () => {
               New Orleans region.
             </p>
             <div className="flex flex-col md:flex-row">
-              <button className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2">
+              <Link
+                href="/training/careers/quiz"
+                className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2"
+              >
                 Take Our Short Quiz
-              </button>
-              <button className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2">
+              </Link>
+              <Link
+                href="/training/careers"
+                className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2"
+              >
                 See All Careers
-              </button>
+              </Link>
             </div>
           </div>
         </div>

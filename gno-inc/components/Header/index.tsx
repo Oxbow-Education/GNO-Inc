@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = () => {
         </div>
         <MenuIcon
           onClick={() => setNavIsOpen(!navIsOpen)}
-          className="fill-darkBlue h-8 w-8 lg:hidden block absolute right-6 top-6 outline-none"
+          className="fill-darkBlue h-8 w-8 lg:hidden block absolute right-6 top-6 outline-none b"
         />
 
         <nav
@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = () => {
               </Link>
             </li>
             <li className="px-4 py-2 lg:p-0">
-              <Link href="#">
+              <Link href="/training/profile">
                 <a className="text-darkBlue font-bold mx-2" href="#">
                   My Account
                 </a>
