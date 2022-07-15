@@ -531,7 +531,7 @@ const ContactForm = () => {
           </div>
           <div className="block lg:hidden col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
             <img
-              className="h-full object-contain"
+              className="h-full object-contain max-h-[500px]"
               src="images/email-graphic@2x.png"
             />
           </div>
