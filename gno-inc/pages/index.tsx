@@ -267,7 +267,7 @@ const Testimonials = () => {
               </h3>
             </div>
           </div>
-          <button className="block my-10 mx-auto rounded-button bg-orange text-white max-w-full min-w-button w-[267px] md:w-auto block h-button font-medium">
+          <button className="block my-10 mx-auto rounded-button bg-orange text-white max-w-full min-w-button w-[267px] block h-button font-medium">
             Checkout Our Resource Hub
           </button>
         </div>
