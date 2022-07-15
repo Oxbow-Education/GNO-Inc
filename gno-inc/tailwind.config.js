@@ -46,7 +46,7 @@ module.exports = {
         10: '10px'
       },
       gridTemplateRows: {
-        contact: '100px mimax(auto,500px)'
+        contact: '100px auto'
       },
       gridTemplateColumns: {
         contact: '2fr 3fr',
