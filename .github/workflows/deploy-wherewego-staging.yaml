@@ -17,6 +17,7 @@ jobs:
     env:
       REPO: wwg_gno
       DOCKERFILE: ./deployment/Dockerfile
+      ENCODED_ENV_KEY: GNO_WHEREWEGO_STAGING
 
     steps:
       - name: Checkout Staging Branch
@@ -24,6 +25,14 @@ jobs:
         with:
           ref: ${{ env.BRANCH }}
           fetch-depth: 0
+
+      - name: Decode and write env file
+        id: write_env
+        uses: timheuer/base64-to-file@v1.1
+        with:
+          fileName: '.env'
+          fileDir: './gno-inc/'
+          encodedString: ${{ secrets[env.ENCODED_ENV_KEY] }}
 
       - name: Build and push image to registry
         uses: nikkag/build-docker-push-azure-action@main
