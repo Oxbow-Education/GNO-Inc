@@ -50,7 +50,7 @@ const Banner = () => {
               Greater New Orleans Career Guide
             </h1>
             <p className="md:text-left text-center text-2xl leading-copy font-extralight">
-              Explore the great careers our region has to offer, and the
+              Explore the great careers our region has to offer and the
               education pathways to get there.
             </p>
             <div className="mx-auto md:mx-0 my-8">
@@ -468,9 +468,9 @@ const ContactForm = () => {
   return (
     <div className="container mx-auto my-10 md:my-10">
       <div className="flex flex-col lg:grid grid-rows-contact grid-cols-contact relative">
-        <div className="bg-lightBlue mx-6 px-6 pt-6 pb-0 lg:p-20 col-start-1 col-end-3 row-start-2 row-end-3 rounded-2xl flex flex-col lg:grid grid-rows-1 grid-cols-contact">
+        <div className="bg-lightBlue mx-6 px-6 pt-6 pb-0 lg:py-8 lg:px-10 2xl:p-20 col-start-1 col-end-3 row-start-2 row-end-3 rounded-2xl flex flex-col lg:grid grid-rows-1 grid-cols-contact">
           <div className="lg:pr-6">
-            <h2 className="text-2xl lg:text-4xl text-white font-semibold">
+            <h2 className="text-2xl 2xl:text-4xl text-white font-semibold">
               Lorem ipsum dolor sit amet consectetur.
             </h2>
             {formResponse && (
@@ -484,7 +484,7 @@ const ContactForm = () => {
                 {formResponse.message}
               </p>
             )}
-            <form className="py-8 pb-10" onSubmit={handleSubmit}>
+            <form className="py-4 2xl:py-8 pb-10" onSubmit={handleSubmit}>
               <input
                 value={formState.name.value}
                 onChange={(event: ChangeEvent<HTMLInputElement>) => {
@@ -492,7 +492,7 @@ const ContactForm = () => {
                   setFormState({ ...formState });
                 }}
                 type="text"
-                className={`rounded-lg p-4 lg:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
+                className={`rounded-lg p-4 2xl:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
                 ${formState.name.error ? 'bg-red/50' : 'bg-mdBlue'}
                 `}
                 placeholder="Your Name"
@@ -509,7 +509,7 @@ const ContactForm = () => {
                   setFormState({ ...formState });
                 }}
                 type="text"
-                className={`rounded-lg p-4 lg:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
+                className={`rounded-lg p-4 2xl:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
                 ${formState.email.error ? 'bg-red/50' : 'bg-mdBlue'}
                 `}
                 placeholder="Your Email"
@@ -525,7 +525,7 @@ const ContactForm = () => {
                   formState.message.value = event.target.value;
                   setFormState({ ...formState });
                 }}
-                className={`rounded-lg p-4 lg:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
+                className={`rounded-lg p-4 2xl:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
                 ${formState.message.error ? 'bg-red/50' : 'bg-mdBlue'}
                 `}
                 placeholder="Message"
@@ -552,9 +552,9 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="hidden w-full lg:block col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
+        <div className="relative hidden w-full lg:block col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
           <img
-            className=" block object-contain"
+            className="block object-contain xl:relative absolute inset-4 xl:inset-0 xl:w-auto w-5/6"
             src="images/email-graphic@2x.png"
           />
         </div>
