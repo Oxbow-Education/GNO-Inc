@@ -18,6 +18,7 @@ import Footer from '../components/Footer';
 const EMAIL_VALIDATION_REG_EXP = new RegExp(
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 );
+const MAXIMUM_1000_CHARS = new RegExp(/^.{1,1000}$/);
 import axios from 'axios';
 import Link from 'next/link';
 
@@ -228,9 +229,14 @@ const Testimonials = () => {
             </Tab.Panels>
           </Tab.Group>
         </div>
-        <button className="block my-4 md:my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] w-auto block h-button font-medium max-w-full">
-          Explore Careers
-        </button>
+        <Link href="/training/careers">
+          <a
+            href="/training/careers"
+            className="my-4 md:my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] h-button font-medium max-w-full flex items-center justify-center"
+          >
+            Explore Careers
+          </a>
+        </Link>
         <div className="pt-24">
           <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10">
             Resources
@@ -267,9 +273,15 @@ const Testimonials = () => {
               </h3>
             </div>
           </div>
-          <button className="block my-10 mx-auto rounded-button bg-orange text-white max-w-full min-w-button w-[267px] block h-button font-medium">
-            Checkout Our Resource Hub
-          </button>
+          <Link href="https://gnocareerguide.preview.softr.app/?t=1657898150983">
+            <a
+              href="https://gnocareerguide.preview.softr.app/?t=1657898150983"
+              target="_blank"
+              className="my-10 mx-auto rounded-button bg-orange text-white max-w-full min-w-button w-[267px] flex items-center justify-center h-button font-medium"
+            >
+              Checkout Our Resource Hub
+            </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -400,8 +412,8 @@ const ContactForm = () => {
       value: '',
       required: true,
       error: false,
-      pattern: false,
-      errorMessage: 'This field is required',
+      pattern: MAXIMUM_1000_CHARS,
+      errorMessage: 'Please limit to 1000 characters',
     },
   });
 
@@ -435,7 +447,10 @@ const ContactForm = () => {
         !(formState[field].pattern as RegExp).test(formState[field].value)
       ) {
         formState[field].error = true;
-        formState[field].errorMessage = `Please provide a valid ${field}`;
+        formState[field].errorMessage =
+          field === 'message'
+            ? 'Please limit to 1000 characters.'
+            : `Please provide a valid ${field}`;
         isValid = false;
       } else {
         formState[field].error = false;

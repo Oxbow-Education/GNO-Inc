@@ -8,7 +8,8 @@ export const sendEmail = (data: {
 }) => {
   const msg = {
     to: 'nina@wherewego.org', // Change to your recipient
-    from: 'nina@wherewego.org', // Change to your verified sender
+    // to: 'jtatum@gnoinc.org' // change when verified
+    from: data.email, // Change to your verified sender
     subject: 'Form Submission - GNO Inc Career Guide Landing Page',
     html: `<ul><li>Name: ${data.name}</li><li>Email: ${data.email}</li><li>Message: ${data.message}</li></ul>`,
   };
