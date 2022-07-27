@@ -18,6 +18,7 @@ import Footer from '../components/Footer';
 const EMAIL_VALIDATION_REG_EXP = new RegExp(
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 );
+const MAXIMUM_1000_CHARS = new RegExp(/^.{1,1000}$/);
 import axios from 'axios';
 import Link from 'next/link';
 
@@ -49,15 +50,17 @@ const Banner = () => {
               Greater New Orleans Career Guide
             </h1>
             <p className="md:text-left text-center text-2xl leading-copy font-extralight">
-              Explore the great careers our region has to offer, and the
+              Explore the great careers our region has to offer and the
               education pathways to get there.
             </p>
             <div className="mx-auto md:mx-0 my-8">
-              <Link
-                href="/training/careers/quiz"
-                className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium"
-              >
-                Take Our Short Quiz
+              <Link href="/training/careers/quiz">
+                <a
+                  className="rounded-button bg-orange text-white min-w-button w-[222px] max-w-full block h-button font-medium flex items-center justify-center"
+                  href="/training/careers/quiz"
+                >
+                  Take Our Short Quiz
+                </a>
               </Link>
             </div>
           </div>
@@ -226,9 +229,14 @@ const Testimonials = () => {
             </Tab.Panels>
           </Tab.Group>
         </div>
-        <button className="block my-4 md:my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] w-auto block h-button font-medium max-w-full">
-          Explore Careers
-        </button>
+        <Link href="/training/careers">
+          <a
+            href="/training/careers"
+            className="my-4 md:my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] h-button font-medium max-w-full flex items-center justify-center"
+          >
+            Explore Careers
+          </a>
+        </Link>
         <div className="pt-24">
           <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10">
             Resources
@@ -265,9 +273,15 @@ const Testimonials = () => {
               </h3>
             </div>
           </div>
-          <button className="block my-10 mx-auto rounded-button bg-orange text-white max-w-full min-w-button w-[267px] w-auto block h-button font-medium">
-            Checkout Our Resource Hub
-          </button>
+          <Link href="https://gnocareerguide.preview.softr.app/?t=1657898150983">
+            <a
+              href="https://gnocareerguide.preview.softr.app/?t=1657898150983"
+              target="_blank"
+              className="my-10 mx-auto rounded-button bg-orange text-white max-w-full min-w-button w-[267px] flex items-center justify-center h-button font-medium"
+            >
+              Checkout Our Resource Hub
+            </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -350,17 +364,21 @@ const CareerSwiper = () => {
               New Orleans region.
             </p>
             <div className="flex flex-col md:flex-row">
-              <Link
-                href="/training/careers/quiz"
-                className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2"
-              >
-                Take Our Short Quiz
+              <Link href="/training/careers/quiz">
+                <a
+                  href="/training/careers/quiz"
+                  className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2 flex items-center justify-center"
+                >
+                  Take Our Short Quiz
+                </a>
               </Link>
-              <Link
-                href="/training/careers"
-                className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2"
-              >
-                See All Careers
+              <Link href="/training/careers">
+                <a
+                  className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2 flex items-center justify-center"
+                  href="/training/careers"
+                >
+                  See All Careers
+                </a>
               </Link>
             </div>
           </div>
@@ -394,8 +412,8 @@ const ContactForm = () => {
       value: '',
       required: true,
       error: false,
-      pattern: false,
-      errorMessage: 'This field is required',
+      pattern: MAXIMUM_1000_CHARS,
+      errorMessage: 'Please limit to 1000 characters',
     },
   });
 
@@ -429,7 +447,10 @@ const ContactForm = () => {
         !(formState[field].pattern as RegExp).test(formState[field].value)
       ) {
         formState[field].error = true;
-        formState[field].errorMessage = `Please provide a valid ${field}`;
+        formState[field].errorMessage =
+          field === 'message'
+            ? 'Please limit to 1000 characters.'
+            : `Please provide a valid ${field}`;
         isValid = false;
       } else {
         formState[field].error = false;
@@ -447,9 +468,9 @@ const ContactForm = () => {
   return (
     <div className="container mx-auto my-10 md:my-10">
       <div className="flex flex-col lg:grid grid-rows-contact grid-cols-contact relative">
-        <div className="bg-lightBlue mx-6 px-6 pt-6 pb-0 lg:p-20 col-start-1 col-end-3 row-start-2 row-end-3 rounded-2xl flex flex-col lg:grid grid-rows-1 grid-cols-contact">
+        <div className="bg-lightBlue mx-6 px-6 pt-6 pb-0 lg:py-8 lg:px-10 2xl:p-20 col-start-1 col-end-3 row-start-2 row-end-3 rounded-2xl flex flex-col lg:grid grid-rows-1 grid-cols-contact">
           <div className="lg:pr-6">
-            <h2 className="text-2xl lg:text-4xl text-white font-semibold">
+            <h2 className="text-2xl 2xl:text-4xl text-white font-semibold">
               Lorem ipsum dolor sit amet consectetur.
             </h2>
             {formResponse && (
@@ -463,7 +484,7 @@ const ContactForm = () => {
                 {formResponse.message}
               </p>
             )}
-            <form className="py-8 pb-10" onSubmit={handleSubmit}>
+            <form className="py-4 2xl:py-8 pb-10" onSubmit={handleSubmit}>
               <input
                 value={formState.name.value}
                 onChange={(event: ChangeEvent<HTMLInputElement>) => {
@@ -471,7 +492,7 @@ const ContactForm = () => {
                   setFormState({ ...formState });
                 }}
                 type="text"
-                className={`rounded-lg p-4 lg:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
+                className={`rounded-lg p-4 2xl:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
                 ${formState.name.error ? 'bg-red/50' : 'bg-mdBlue'}
                 `}
                 placeholder="Your Name"
@@ -488,7 +509,7 @@ const ContactForm = () => {
                   setFormState({ ...formState });
                 }}
                 type="text"
-                className={`rounded-lg p-4 lg:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
+                className={`rounded-lg p-4 2xl:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
                 ${formState.email.error ? 'bg-red/50' : 'bg-mdBlue'}
                 `}
                 placeholder="Your Email"
@@ -504,7 +525,7 @@ const ContactForm = () => {
                   formState.message.value = event.target.value;
                   setFormState({ ...formState });
                 }}
-                className={`rounded-lg p-4 lg:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
+                className={`rounded-lg p-4 2xl:p-6 text-white w-full font-medium outline-none placeholder:text-white/50 my-2
                 ${formState.message.error ? 'bg-red/50' : 'bg-mdBlue'}
                 `}
                 placeholder="Message"
@@ -525,15 +546,15 @@ const ContactForm = () => {
           </div>
           <div className="block lg:hidden col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
             <img
-              className="h-full object-contain"
+              className="object-contain max-h-[500px] mx-auto"
               src="images/email-graphic@2x.png"
             />
           </div>
         </div>
 
-        <div className="hidden lg:block col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
+        <div className="relative hidden w-full lg:block col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
           <img
-            className="h-full object-contain"
+            className="block object-contain xl:relative absolute inset-4 xl:inset-0 xl:w-auto w-5/6"
             src="images/email-graphic@2x.png"
           />
         </div>

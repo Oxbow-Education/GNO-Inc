@@ -46,10 +46,10 @@ module.exports = {
         10: '10px'
       },
       gridTemplateRows: {
-        contact: '100px auto'
+        contact: 'auto'
       },
       gridTemplateColumns: {
-        contact: '2fr 3fr',
+        contact: '1fr 1fr',
         mdContact: '4fr 6fr'
       }
     },

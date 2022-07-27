@@ -33,15 +33,19 @@ const Header: React.FC<HeaderProps> = () => {
         >
           <ul className="flex flex-col lg:flex-row lg:items-center w-full justify-around bg-white">
             <li className="px-4 py-2 lg:p-0">
-              <Link href="#">
-                <a className="text-darkBlue font-bold mx-2" href="#">
+              <Link href="https://gnoinc.org/">
+                <a className="text-darkBlue font-bold mx-2" href="https://gnoinc.org/" target="_blank">
                   About GNO Inc.
                 </a>
               </Link>
             </li>
             <li className="px-4 py-2 lg:p-0">
-              <Link href="#">
-                <a className="text-darkBlue font-bold mx-2" href="#">
+              <Link href="https://gnocareerguide.preview.softr.app/?t=1657898150983">
+                <a
+                  className="text-darkBlue font-bold mx-2"
+                  href="https://gnocareerguide.preview.softr.app/?t=1657898150983"
+                  target="_blank"
+                >
                   Resource Hub
                 </a>
               </Link>
