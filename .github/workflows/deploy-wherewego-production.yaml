@@ -1,0 +1,134 @@
+name: Build production docker image and deploy to azure container
+concurrency: wherewego-production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  BRANCH: main
+  PROJECT_ENV: production
+
+jobs:
+  tag_version:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '#deployonly')"
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ env.BRANCH }}
+          fetch-depth: 0
+
+      - name: Git Version
+        id: semvar
+        uses: paulhatch/semantic-version@v4.0.3
+        with:
+          tag_prefix: "v"
+          format: "${major}.${minor}.${patch}"
+
+      - name: Tag main branch with latest version
+        uses: pkgdeps/git-tag-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_repo: ${{ github.repository }}
+          git_commit_sha: ${{ github.sha }}
+          version: "${{ steps.semvar.outputs.version_tag }}"
+
+  merge_back:
+    runs-on: ubuntu-latest
+    needs: tag_version
+    if: always()
+
+    steps:
+      - name: Merge main back into staging
+        uses: everlytic/branch-merge@1.1.2
+        with:
+          github_token: ${{ github.token }}
+          source_ref: main
+          target_branch: staging
+
+  build_landing:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '#deployonly')"
+    needs: tag_version
+    env:
+      REPO: wherewego_landing_prod
+      DOCKERFILE: ./deployment/dockerfiles/Dockerfile
+      ENCODED_ENV_KEY: LANDING_WHEREWEGO_PROD
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ env.BRANCH }}
+          fetch-depth: 0
+
+      - name: Decode and write env file
+        id: write_env
+        uses: timheuer/base64-to-file@v1.1
+        with:
+          fileName: '.env'
+          fileDir: './project-connect/'
+          encodedString: ${{ secrets[env.ENCODED_ENV_KEY] }}
+
+      - name: 'Get Latest tag'
+        id: tag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
+
+      - name: Build and push image to registry
+        uses: nikkag/build-docker-push-azure-action@main
+        with:
+          acr_username: ${{ secrets.ACR_TOKEN_NAME }}
+          acr_password: ${{ secrets.ACR_TOKEN_VALUE }}
+          registry: wherewego
+          repo: ${{ env.REPO }}
+          dockerfile: ${{ env.DOCKERFILE }}
+          version_tag: ${{ steps.tag.outputs.tag }}
+
+  deploy_group:
+    runs-on: ubuntu-latest
+    needs: build_landing
+    if: always()
+    env:
+      DEPLOY_FILE: deployment/deploy-azure-fe-production.yaml
+
+    steps:
+      - name: Fail if needed jobs fail without deployonly tag
+        if: ${{ contains(needs.*.result, 'failure') && !contains(github.event.head_commit.message, '#deployonly')}}
+        run: exit 1
+
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ env.BRANCH }}
+          fetch-depth: 0
+
+      - name: Login via Azure CLI
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: 'Get Latest tag'
+        id: tag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
+
+      - name: 'Replace variables in deployment script'
+        uses: cschleiden/replace-tokens@v1
+        with:
+          files: "${{ env.DEPLOY_FILE }}"
+        env:
+          LND_VERSION: ${{ steps.tag.outputs.tag }}
+          ACR_TOKEN_NAME: ${{ secrets.ACR_TOKEN_NAME }}
+          ACR_TOKEN_VALUE: ${{ secrets.ACR_TOKEN_VALUE }}
+
+      - name: Deploy to Azure Container Instances
+        run: az container create -g wwg --file ${{ env.DEPLOY_FILE }}
+
+      - name: Purge old images from registry
+        run: az acr run -g wwg --cmd "${{ env.purge_cmd }}" --registry wherewego  --timeout 360 /dev/null
+        env:
+          purge_cmd: "acr purge --filter 'wherewego_landing_prod:v.*' --ago 0d --keep 2 --untagged"
