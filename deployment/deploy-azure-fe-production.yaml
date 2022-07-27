@@ -7,7 +7,7 @@ properties:
     properties:
       image: wherewego.azurecr.io/wherewego_landing_prod:#{LND_VERSION}#
       ports:
-      - port: 3005
+      - port: 3006
         protocol: TCP
       resources:
         requests:
@@ -15,7 +15,7 @@ properties:
           memoryInGB: 1.5
   ipAddress:
     ports:
-    - port: 3005
+    - port: 3006
       protocol: TCP
     type: Public
     dnsNameLabel: wherewego-landing
