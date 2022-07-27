@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = () => {
         >
           <ul className="flex flex-col lg:flex-row lg:items-center w-full justify-around bg-white">
             <li className="px-4 py-2 lg:p-0">
-              <Link href="https://gnoinc.org/">
+              <Link href="https://gnoinc.org/about">
                 <a className="text-darkBlue font-bold mx-2" href="https://gnoinc.org/" target="_blank">
                   About GNO Inc.
                 </a>

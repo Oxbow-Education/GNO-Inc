@@ -21,6 +21,7 @@ const EMAIL_VALIDATION_REG_EXP = new RegExp(
 const MAXIMUM_1000_CHARS = new RegExp(/^.{1,1000}$/);
 import axios from 'axios';
 import Link from 'next/link';
+import ArrowLeft from '../components/icons/Menu/ArrowLeft';
 
 const BrowserOnly = dynamic(() => import('../components/BrowserOnly'), {
   ssr: false,
@@ -56,7 +57,7 @@ const Banner = () => {
             <div className="mx-auto md:mx-0 my-8">
               <Link href="/training/careers/quiz">
                 <a
-                  className="rounded-button bg-orange text-white min-w-button w-[222px] max-w-full block h-button font-medium flex items-center justify-center"
+                  className="rounded-button bg-orange hover:bg-white border-2 border-orange border-solid hover:border-ora text-white hover:text-orange min-w-button w-[222px] max-w-full block h-button font-medium flex items-center justify-center"
                   href="/training/careers/quiz"
                 >
                   Take Our Short Quiz
@@ -232,7 +233,7 @@ const Testimonials = () => {
         <Link href="/training/careers">
           <a
             href="/training/careers"
-            className="my-4 md:my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] h-button font-medium max-w-full flex items-center justify-center"
+            className="my-4 md:my-10 mx-auto rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange min-w-button w-[267px] h-button font-medium max-w-full flex items-center justify-center"
           >
             Explore Careers
           </a>
@@ -277,7 +278,7 @@ const Testimonials = () => {
             <a
               href="https://gnocareerguide.preview.softr.app/?t=1657898150983"
               target="_blank"
-              className="my-10 mx-auto rounded-button bg-orange text-white max-w-full min-w-button w-[267px] flex items-center justify-center h-button font-medium"
+              className="my-10 mx-auto rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange max-w-full min-w-button w-[267px] flex items-center justify-center h-button font-medium"
             >
               Checkout Our Resource Hub
             </a>
@@ -328,12 +329,9 @@ const CareerSwiper = () => {
                       if (!swiper) return;
                       swiper.slidePrev();
                     }}
-                    className="prev bg-orange rounded-button p-5 mr-2 cursor-pointer"
+                    className="prev bg-orange cursor-pointer hover:bg-white stroke-white hover:stroke-orange border-2 border-solid border-orange rounded-button p-5 mr-2 cursor-pointer"
                   >
-                    <img
-                      className="h-7 w-7"
-                      src="icons/arrow-left-light@2x.png"
-                    />
+                    <ArrowLeft className="stroke-inherit h-7 w-7" />
                   </div>
                   <div
                     onClick={() => {
@@ -341,12 +339,9 @@ const CareerSwiper = () => {
                       swiper.slideNext();
                     }}
                     ref={pathwaysNextRef}
-                    className="next bg-orange rounded-button p-5 ml-2 cursor-pointer"
+                    className="next bg-orange hover:bg-white stroke-white hover:stroke-orange border-2 border-solid border-orange rounded-button p-5 mr-2 cursor-pointer"
                   >
-                    <img
-                      className="h-7 w-7"
-                      src="icons/arrow-right-light@2x.png"
-                    />
+                    <ArrowLeft className="stroke-inherit h-7 w-7 rotate-180" />
                   </div>
                 </div>
               </Swiper>
@@ -367,14 +362,14 @@ const CareerSwiper = () => {
               <Link href="/training/careers/quiz">
                 <a
                   href="/training/careers/quiz"
-                  className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2 flex items-center justify-center"
+                  className="rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2 flex items-center justify-center"
                 >
                   Take Our Short Quiz
                 </a>
               </Link>
               <Link href="/training/careers">
                 <a
-                  className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2 flex items-center justify-center"
+                  className="rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange exp min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2 flex items-center justify-center"
                   href="/training/careers"
                 >
                   See All Careers
@@ -538,7 +533,7 @@ const ContactForm = () => {
               )}
               <button
                 type="submit"
-                className="bg-white rounded-button text-lightBlue w-full p-6 text-lg font-semibold my-4"
+                className="bg-white hover:bg-lightBlue rounded-button text-lightBlue hover:text-white border-2 border-solid border-white hover:border-white w-full p-6 text-lg font-semibold my-4"
               >
                 Submit
               </button>
