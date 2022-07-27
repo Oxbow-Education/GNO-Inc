@@ -57,7 +57,7 @@ jobs:
     needs: tag_version
     env:
       REPO: wherewego_landing_prod
-      DOCKERFILE: ./deployment/dockerfiles/Dockerfile
+      DOCKERFILE: ./deployment/Dockerfile
       ENCODED_ENV_KEY: LANDING_WHEREWEGO_PROD
 
     steps:
