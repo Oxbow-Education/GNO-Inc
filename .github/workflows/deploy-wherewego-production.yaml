@@ -38,19 +38,6 @@ jobs:
           git_commit_sha: ${{ github.sha }}
           version: "${{ steps.semvar.outputs.version_tag }}"
 
-  merge_back:
-    runs-on: ubuntu-latest
-    needs: tag_version
-    if: always()
-
-    steps:
-      - name: Merge main back into staging
-        uses: everlytic/branch-merge@1.1.2
-        with:
-          github_token: ${{ github.token }}
-          source_ref: main
-          target_branch: staging
-
   build_landing:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '#deployonly')"
