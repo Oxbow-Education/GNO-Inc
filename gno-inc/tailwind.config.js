@@ -12,7 +12,9 @@ module.exports = {
         lightBlue: '#01ADEE',
         mdBlue: '#009FDB',
         white: 'white',
-        red: 'red'
+        red: 'red',
+        gray: '#797979',
+
       },
       fontSize: {
         '5xl': '60px',

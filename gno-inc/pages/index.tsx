@@ -80,7 +80,7 @@ const Testimonials = () => {
     <div className="py-10 px-8 md:p-28">
       <div className="container mx-auto">
         <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10">
-          Testimonials Heading
+          Career Path Testimonials
         </h2>
         <div className="w-[700px] mx-auto max-w-full">
           <Tab.Group>
@@ -177,19 +177,19 @@ const Testimonials = () => {
                     />
                   </div>
                   <div className="flex flex-col items-center p-10">
-                    <h3 className="text-darkBlue text-4xl font-medium">2020</h3>
+                    <h3 className="text-darkBlue text-4xl font-medium">2019</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Tulane Graduate
+                      Nunez Community College Graduate
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2021</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Ad Agency Internship
+                      Welding Apprenticeship
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2022</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Full Time Graphic Designer
+                      Full Time Welding Professional & Company owner
                     </p>
                   </div>
                 </div>
@@ -208,19 +208,19 @@ const Testimonials = () => {
                     />
                   </div>
                   <div className="flex flex-col items-center p-10">
-                    <h3 className="text-darkBlue text-4xl font-medium">2020</h3>
+                    <h3 className="text-darkBlue text-4xl font-medium">2018</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Tulane Graduate
+                      UNO Graduate
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
-                    <h3 className="text-darkBlue text-4xl font-medium">2021</h3>
+                    <h3 className="text-darkBlue text-4xl font-medium">2019</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Ad Agency Internship
+                      Hancock Whitney Entry Level Accountant
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2022</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Full Time Graphic Designer
+                      EY Manager
                     </p>
                   </div>
                 </div>
@@ -237,8 +237,8 @@ const Testimonials = () => {
           </a>
         </Link>
         <div className="pt-24">
-          <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10">
-            Resources
+          <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10 my-6">
+            Services to help in your education and training journey
           </h2>
           <div className="grid grid-rows-2 grid-cols-2 md:grid-rows-1 md:grid-cols-3 gap-8 max-w-full w-[1000px] mx-auto">
             <div className="flex flex-col items-center justify-between h-full">
@@ -454,9 +454,7 @@ const ContactForm = () => {
     return isValid;
   };
 
-  useEffect(() => {
-    console.log(formResponse);
-  }, [formResponse]);
+
 
   return (
     <div className="container mx-auto my-10 md:my-10">
@@ -464,7 +462,7 @@ const ContactForm = () => {
         <div className="bg-lightBlue mx-6 px-6 pt-6 pb-0 lg:py-8 lg:px-10 2xl:p-20 col-start-1 col-end-3 row-start-2 row-end-3 rounded-2xl flex flex-col lg:grid grid-rows-1 grid-cols-contact">
           <div className="lg:pr-6">
             <h2 className="text-2xl 2xl:text-4xl text-white font-semibold">
-              Lorem ipsum dolor sit amet consectetur.
+              Want to learn more about the Career Guide? Get in touch.
             </h2>
             {formResponse && (
               <p

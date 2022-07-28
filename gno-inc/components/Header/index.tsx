@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = () => {
           <ul className="flex flex-col lg:flex-row lg:items-center w-full justify-around bg-white">
             <li className="px-4 py-2 lg:p-0">
               <Link href="https://gnoinc.org/about">
-                <a className="text-darkBlue font-bold mx-2" href="https://gnoinc.org/about" target="_blank">
+                <a className="text-darkBlue font-bold mx-2 hover:text-gray" href="https://gnoinc.org/about" target="_blank">
                   About GNO Inc.
                 </a>
               </Link>
@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = () => {
             <li className="px-4 py-2 lg:p-0">
               <Link href="https://gnocareerguide.preview.softr.app/?t=1657898150983">
                 <a
-                  className="text-darkBlue font-bold mx-2"
+                  className="text-darkBlue font-bold mx-2 hover:text-gray"
                   href="https://gnocareerguide.preview.softr.app/?t=1657898150983"
                   target="_blank"
                 >
@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = () => {
             </li>
             <li className="px-4 py-2 lg:p-0">
               <Link href="/training/profile">
-                <a className="text-darkBlue font-bold mx-2" href="#">
+                <a className="text-darkBlue font-bold mx-2 hover:text-gray" href="#">
                   My Account
                 </a>
               </Link>
