@@ -2,15 +2,13 @@ import { Tab } from '@headlessui/react';
 import { Navigation, A11y, Controller } from 'swiper';
 
 import type { NextPage } from 'next';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Header from '../components/Header';
 import React, {
   ChangeEvent,
   FormEvent,
-  FormEventHandler,
   Fragment,
   useEffect,
-  useRef,
   useState,
 } from 'react';
 import dynamic from 'next/dynamic';
