@@ -7,18 +7,43 @@ const Footer: React.FC<FooterProps> = () => {
     <footer className="bg-darkBlue p-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 border-b-1 border-white/50 border-solid pb-6 md:pb-0">
-          <button className="text-center text-white py-2 font-semibold text-base">
-            Browse Careers
-          </button>
-          <button className="text-center text-white py-2 font-semibold text-base">
-            Browse Trainings
-          </button>
-          <button className="text-center text-white py-2 font-semibold text-base">
-            Browse Resources
-          </button>
-          <button className="text-center text-white py-2 font-semibold text-base">
+          <Link href="/training/careers">
+            <a
+              href="/training/careers"
+              target="_blank"
+              className="text-center text-white py-2 font-semibold text-base hover:text-gray"
+            >
+              Browse Careers
+            </a>
+          </Link>
+          <Link href="/training">
+            <a
+              href="/training"
+              target="_blank"
+              className="text-center text-white py-2 font-semibold text-base hover:text-gray"
+            >
+              Browse Trainings
+            </a>
+          </Link>
+          <Link href="https://gnoresourcehub.wherewego.org">
+            <a
+              href="https://gnoresourcehub.wherewego.org"
+              target="_blank"
+              className="text-center text-white py-2 font-semibold text-base hover:text-gray"
+            >
+              Browse Resources
+            </a>
+          </Link>
+          <Link href="/training/careers/quiz">
+            <a
+              href="/training/careers/quiz"
+              target="_blank"
+              className="text-center text-white py-2 font-semibold text-base hover:text-gray"
+            >
             Take Our Short Quiz
-          </button>
+            </a>
+          </Link>
+          
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10 lg:gap-20">
           <div className="md:py-10 grid grid-rows-3 items-center">
@@ -33,18 +58,23 @@ const Footer: React.FC<FooterProps> = () => {
                 <p className="text-white/60 lg:text-sm md:text-xs text-base md:text-left text-center">
                   1100 Poydras Street, Suite 3475
                 </p>
-                <p className="text-white/60 lg:text-sm md:text-xs md:text-left text-center text-base">New Orleans, LA 70163 </p>
+                <p className="text-white/60 lg:text-sm md:text-xs md:text-left text-center text-base">
+                  New Orleans, LA 70163{' '}
+                </p>
                 <p className="text-white/60 lg:text-sm md:text-xs text-base md:text-left text-center">
                   <Link href="tel:5045276900">
-                    <a href="tel:5045276900">(504) 527 - 6900</a>
+                    <a href="tel:5045276900" className="hover:text-gray">
+                      (504) 527 - 6900
+                    </a>
                   </Link>
                 </p>
               </div>
               <div className="flex-1 items-center">
-                <Link href="#">
+                <Link href="https://gnoinc.org/about">
                   <a
-                    className="w-full block text-white underline font-semibold text-center my-4 md:my-0"
-                    href="#"
+                    className="w-full block text-white underline font-semibold text-center my-4 md:my-0 hover:text-gray"
+                    href="https://gnoinc.org/about"
+                    target="_blank"
                   >
                     Learn More
                   </a>
@@ -63,18 +93,20 @@ const Footer: React.FC<FooterProps> = () => {
               <div className="flex-1">
                 <Link href="mailto:info@wherewego.org">
                   <a
-                    className="w-full block text-white underline font-semibold text-center"
+                    className="w-full block text-white underline font-semibold text-left hover:text-gray"
                     href="mailto:info@wherewego.org"
+                    target="_blank"
                   >
                     info@wherewego.org
                   </a>
                 </Link>
               </div>
               <div className="flex-1">
-                <Link href="#">
+                <Link href="https://wherewego.org">
                   <a
-                    className="w-full block text-white underline font-semibold text-center"
-                    href="#"
+                    className="w-full block text-white underline font-semibold text-center hover:text-gray"
+                    href="https://wherewego.org"
+                    target="_blank"
                   >
                     Learn More
                   </a>
@@ -94,7 +126,11 @@ const Footer: React.FC<FooterProps> = () => {
             <p className="text-white/60 md:ml-auto">
               Built by{' '}
               <Link href={'https://wherewego.org'}>
-                <a className="underline" href="https://wherewego.org">
+                <a
+                  className="underline hover:text-gray"
+                  target="_blank"
+                  href="https://wherewego.org"
+                >
                   WhereWeGo
                 </a>
               </Link>{' '}
