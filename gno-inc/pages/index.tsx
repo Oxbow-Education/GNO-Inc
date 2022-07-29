@@ -272,9 +272,9 @@ const Testimonials = () => {
               </h3>
             </div>
           </div>
-          <Link href="https://gnocareerguide.preview.softr.app/?t=1657898150983">
+          <Link href="https://gnoresourcehub.wherewego.org">
             <a
-              href="https://gnocareerguide.preview.softr.app/?t=1657898150983"
+              href="https://gnoresourcehub.wherewego.org"
               target="_blank"
               className="my-10 mx-auto rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange max-w-full min-w-button w-[267px] flex items-center justify-center h-button font-medium"
             >
