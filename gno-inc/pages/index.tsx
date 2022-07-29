@@ -420,7 +420,7 @@ const ContactForm = () => {
       message: formState.message.value,
     };
     const response = await axios
-      .post('/api/email', data)
+      .post('/gno-api/email', data)
       .then((res) => res.data)
       .catch((err) => err.response.data);
 
