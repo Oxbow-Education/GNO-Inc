@@ -140,7 +140,7 @@ const Testimonials = () => {
                       className="absolute bottom-0 left-0 w-32  z-0"
                     />
                     <img
-                      className="z-10 relative"
+                      className="z-10 relative h-full object-cover rounded-testimonialsImage"
                       src="images/jessica@2x.png"
                       alt="Jessica: Graphic Designer"
                     />
@@ -171,9 +171,9 @@ const Testimonials = () => {
                       className="absolute bottom-0 left-0 w-32  z-0"
                     />
                     <img
-                      className="z-10 relative"
-                      src="images/jessica@2x.png"
-                      alt="Jessica: Graphic Designer"
+                      className="z-10 relative h-full object-cover rounded-testimonialsImage"
+                      src="https://res.cloudinary.com/wherewego/image/upload/v1659116482/WWG2000%20Site%20Photos/owmjeefomvzdb1nl2cj4.jpg"
+                      alt="Richard: Welder"
                     />
                   </div>
                   <div className="flex flex-col items-center p-10">
@@ -202,9 +202,9 @@ const Testimonials = () => {
                       className="absolute bottom-0 left-0 w-32  z-0"
                     />
                     <img
-                      className="z-10 relative"
-                      src="images/jessica@2x.png"
-                      alt="Jessica: Graphic Designer"
+                      className="z-10 relative h-full object-cover rounded-testimonialsImage"
+                      src="https://res.cloudinary.com/wherewego/image/upload/v1659116483/WWG2000%20Site%20Photos/w8quh27lrjue8wijecwg.jpg"
+                      alt="Tessa: Accountant"
                     />
                   </div>
                   <div className="flex flex-col items-center p-10">

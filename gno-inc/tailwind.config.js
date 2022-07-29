@@ -34,6 +34,7 @@ module.exports = {
       },
       borderRadius: {
         button: '8px',
+        testimonialsImage: '40px'
       },
       height: {
         button: '70px',
