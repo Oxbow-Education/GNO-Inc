@@ -2,15 +2,13 @@ import { Tab } from '@headlessui/react';
 import { Navigation, A11y, Controller } from 'swiper';
 
 import type { NextPage } from 'next';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Header from '../components/Header';
 import React, {
   ChangeEvent,
   FormEvent,
-  FormEventHandler,
   Fragment,
   useEffect,
-  useRef,
   useState,
 } from 'react';
 import dynamic from 'next/dynamic';
@@ -21,6 +19,7 @@ const EMAIL_VALIDATION_REG_EXP = new RegExp(
 const MAXIMUM_1000_CHARS = new RegExp(/^.{1,1000}$/);
 import axios from 'axios';
 import Link from 'next/link';
+import ArrowLeft from '../components/icons/Menu/ArrowLeft';
 
 const BrowserOnly = dynamic(() => import('../components/BrowserOnly'), {
   ssr: false,
@@ -56,7 +55,7 @@ const Banner = () => {
             <div className="mx-auto md:mx-0 my-8">
               <Link href="/training/careers/quiz">
                 <a
-                  className="rounded-button bg-orange text-white min-w-button w-[222px] max-w-full block h-button font-medium flex items-center justify-center"
+                  className="rounded-button bg-orange hover:bg-white border-2 border-orange border-solid hover:border-ora text-white hover:text-orange min-w-button w-[222px] max-w-full block h-button font-medium flex items-center justify-center"
                   href="/training/careers/quiz"
                 >
                   Take Our Short Quiz
@@ -81,7 +80,7 @@ const Testimonials = () => {
     <div className="py-10 px-8 md:p-28">
       <div className="container mx-auto">
         <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10">
-          Testimonials Heading
+          Career Path Testimonials
         </h2>
         <div className="w-[700px] mx-auto max-w-full">
           <Tab.Group>
@@ -141,7 +140,7 @@ const Testimonials = () => {
                       className="absolute bottom-0 left-0 w-32  z-0"
                     />
                     <img
-                      className="z-10 relative"
+                      className="z-10 relative h-[434px] object-cover rounded-testimonialsImage"
                       src="images/jessica@2x.png"
                       alt="Jessica: Graphic Designer"
                     />
@@ -172,25 +171,25 @@ const Testimonials = () => {
                       className="absolute bottom-0 left-0 w-32  z-0"
                     />
                     <img
-                      className="z-10 relative"
-                      src="images/jessica@2x.png"
-                      alt="Jessica: Graphic Designer"
+                      className="z-10 relative h-[434px] object-cover rounded-testimonialsImage"
+                      src="https://res.cloudinary.com/wherewego/image/upload/v1659116482/WWG2000%20Site%20Photos/owmjeefomvzdb1nl2cj4.jpg"
+                      alt="Richard: Welder"
                     />
                   </div>
                   <div className="flex flex-col items-center p-10">
-                    <h3 className="text-darkBlue text-4xl font-medium">2020</h3>
+                    <h3 className="text-darkBlue text-4xl font-medium">2019</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Tulane Graduate
+                      Nunez Community College Graduate
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2021</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Ad Agency Internship
+                      Welding Apprenticeship
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2022</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Full Time Graphic Designer
+                      Full Time Welding Professional & Company owner
                     </p>
                   </div>
                 </div>
@@ -203,25 +202,25 @@ const Testimonials = () => {
                       className="absolute bottom-0 left-0 w-32  z-0"
                     />
                     <img
-                      className="z-10 relative"
-                      src="images/jessica@2x.png"
-                      alt="Jessica: Graphic Designer"
+                      className="z-10 relative h-[434px] object-cover rounded-testimonialsImage"
+                      src="https://res.cloudinary.com/wherewego/image/upload/v1659116483/WWG2000%20Site%20Photos/w8quh27lrjue8wijecwg.jpg"
+                      alt="Tessa: Accountant"
                     />
                   </div>
                   <div className="flex flex-col items-center p-10">
-                    <h3 className="text-darkBlue text-4xl font-medium">2020</h3>
+                    <h3 className="text-darkBlue text-4xl font-medium">2018</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Tulane Graduate
+                      UNO Graduate
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
-                    <h3 className="text-darkBlue text-4xl font-medium">2021</h3>
+                    <h3 className="text-darkBlue text-4xl font-medium">2019</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Ad Agency Internship
+                      Hancock Whitney Entry Level Accountant
                     </p>
                     <img className="my-2 h-16" src="images/down-arrow.png" />
                     <h3 className="text-darkBlue text-4xl font-medium">2022</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
-                      Full Time Graphic Designer
+                      EY Manager
                     </p>
                   </div>
                 </div>
@@ -232,14 +231,14 @@ const Testimonials = () => {
         <Link href="/training/careers">
           <a
             href="/training/careers"
-            className="my-4 md:my-10 mx-auto rounded-button bg-orange text-white min-w-button w-[267px] h-button font-medium max-w-full flex items-center justify-center"
+            className="my-4 md:my-10 mx-auto rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange min-w-button w-[267px] h-button font-medium max-w-full flex items-center justify-center"
           >
             Explore Careers
           </a>
         </Link>
         <div className="pt-24">
-          <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10">
-            Resources
+          <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10 my-6">
+            Services to help in your education and training journey
           </h2>
           <div className="grid grid-rows-2 grid-cols-2 md:grid-rows-1 md:grid-cols-3 gap-8 max-w-full w-[1000px] mx-auto">
             <div className="flex flex-col items-center justify-between h-full">
@@ -273,11 +272,11 @@ const Testimonials = () => {
               </h3>
             </div>
           </div>
-          <Link href="https://gnocareerguide.preview.softr.app/?t=1657898150983">
+          <Link href="https://gnoresourcehub.wherewego.org">
             <a
-              href="https://gnocareerguide.preview.softr.app/?t=1657898150983"
+              href="https://gnoresourcehub.wherewego.org"
               target="_blank"
-              className="my-10 mx-auto rounded-button bg-orange text-white max-w-full min-w-button w-[267px] flex items-center justify-center h-button font-medium"
+              className="my-10 mx-auto rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange max-w-full min-w-button w-[267px] flex items-center justify-center h-button font-medium"
             >
               Checkout Our Resource Hub
             </a>
@@ -328,12 +327,9 @@ const CareerSwiper = () => {
                       if (!swiper) return;
                       swiper.slidePrev();
                     }}
-                    className="prev bg-orange rounded-button p-5 mr-2 cursor-pointer"
+                    className="prev bg-orange cursor-pointer hover:bg-white stroke-white hover:stroke-orange border-2 border-solid border-orange rounded-button p-5 mr-2 cursor-pointer"
                   >
-                    <img
-                      className="h-7 w-7"
-                      src="icons/arrow-left-light@2x.png"
-                    />
+                    <ArrowLeft className="stroke-inherit h-7 w-7" />
                   </div>
                   <div
                     onClick={() => {
@@ -341,12 +337,9 @@ const CareerSwiper = () => {
                       swiper.slideNext();
                     }}
                     ref={pathwaysNextRef}
-                    className="next bg-orange rounded-button p-5 ml-2 cursor-pointer"
+                    className="next bg-orange hover:bg-white stroke-white hover:stroke-orange border-2 border-solid border-orange rounded-button p-5 mr-2 cursor-pointer"
                   >
-                    <img
-                      className="h-7 w-7"
-                      src="icons/arrow-right-light@2x.png"
-                    />
+                    <ArrowLeft className="stroke-inherit h-7 w-7 rotate-180" />
                   </div>
                 </div>
               </Swiper>
@@ -367,14 +360,14 @@ const CareerSwiper = () => {
               <Link href="/training/careers/quiz">
                 <a
                   href="/training/careers/quiz"
-                  className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2 flex items-center justify-center"
+                  className="rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2 flex items-center justify-center"
                 >
                   Take Our Short Quiz
                 </a>
               </Link>
               <Link href="/training/careers">
                 <a
-                  className="rounded-button bg-orange text-white min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2 flex items-center justify-center"
+                  className="rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange exp min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2 flex items-center justify-center"
                   href="/training/careers"
                 >
                   See All Careers
@@ -427,7 +420,7 @@ const ContactForm = () => {
       message: formState.message.value,
     };
     const response = await axios
-      .post('/api/email', data)
+      .post('/gno-api/email', data)
       .then((res) => res.data)
       .catch((err) => err.response.data);
 
@@ -461,9 +454,7 @@ const ContactForm = () => {
     return isValid;
   };
 
-  useEffect(() => {
-    console.log(formResponse);
-  }, [formResponse]);
+
 
   return (
     <div className="container mx-auto my-10 md:my-10">
@@ -471,7 +462,7 @@ const ContactForm = () => {
         <div className="bg-lightBlue mx-6 px-6 pt-6 pb-0 lg:py-8 lg:px-10 2xl:p-20 col-start-1 col-end-3 row-start-2 row-end-3 rounded-2xl flex flex-col lg:grid grid-rows-1 grid-cols-contact">
           <div className="lg:pr-6">
             <h2 className="text-2xl 2xl:text-4xl text-white font-semibold">
-              Lorem ipsum dolor sit amet consectetur.
+              Want to learn more about the Career Guide? Get in touch.
             </h2>
             {formResponse && (
               <p
@@ -538,7 +529,7 @@ const ContactForm = () => {
               )}
               <button
                 type="submit"
-                className="bg-white rounded-button text-lightBlue w-full p-6 text-lg font-semibold my-4"
+                className="bg-white hover:bg-lightBlue rounded-button text-lightBlue hover:text-white border-2 border-solid border-white hover:border-white w-full p-6 text-lg font-semibold my-4"
               >
                 Submit
               </button>

@@ -12,7 +12,9 @@ module.exports = {
         lightBlue: '#01ADEE',
         mdBlue: '#009FDB',
         white: 'white',
-        red: 'red'
+        red: 'red',
+        gray: '#797979',
+
       },
       fontSize: {
         '5xl': '60px',
@@ -32,6 +34,7 @@ module.exports = {
       },
       borderRadius: {
         button: '8px',
+        testimonialsImage: '40px'
       },
       height: {
         button: '70px',

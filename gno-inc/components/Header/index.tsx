@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
+import Menu from '../icons/Menu';
 import MenuIcon from '../icons/Menu';
 
 interface HeaderProps {}
@@ -8,57 +9,62 @@ const Header: React.FC<HeaderProps> = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
   return (
     <header>
-      <div className="absolute top-0 left-0 right-0 container mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between p-4 z-20 w-screen bg-white">
-        <div className="w-3/4 lg:w-[550px] 2xl:w-[700px]">
-          <img
-            className="hidden lg:block"
-            src="images/gno-inc-logo@2x.png"
-            alt="GNO Inc logo"
-          />
-          <img
-            className="block lg:hidden max-h-14"
-            src="images/career-guide-logo-small@2x.png"
-            alt="GNO Inc logo"
-          />
-        </div>
-        <MenuIcon
-          onClick={() => setNavIsOpen(!navIsOpen)}
-          className="fill-darkBlue h-8 w-8 lg:hidden block absolute right-6 top-6 outline-none b"
-        />
+      <div className="container mx-auto px-8 py-4">
+        <div className="flex lg:flex-row flex-col lg:items-center lg:justify-between">
+          <div className="flex items-center justify-bewteen w-full">
+            <a href="/" className="w-3/4 lg:w-[500px]">
+              <img
+                src="https://res.cloudinary.com/wherewego/image/upload/v1659121705/WWG2000%20Site%20Photos/r9h92lcprtcnxft4sv9l.png"
+                alt="GNO. Inc, WhereWeGo Louisiana CareerGuide"
+                className="w-3/4 lg:w-[500px] object-contain mx-0 block"
+              />
+            </a>
+            <Menu
+              onClick={() => {
+                setNavIsOpen(!navIsOpen);
+              }}
+              className="block lg:hidden h-6 w-6 stroke-darkBlue ml-auto"
+            />
+          </div>
 
-        <nav
-          className={`lg:flex-1 lg:mx-8 w-full ${
-            navIsOpen ? 'h-auto' : 'h-0 lg:h-auto overflow-hidden'
-          }`}
-        >
-          <ul className="flex flex-col lg:flex-row lg:items-center w-full justify-around bg-white">
-            <li className="px-4 py-2 lg:p-0">
-              <Link href="https://gnoinc.org/">
-                <a className="text-darkBlue font-bold mx-2" href="https://gnoinc.org/" target="_blank">
-                  About GNO Inc.
-                </a>
-              </Link>
-            </li>
-            <li className="px-4 py-2 lg:p-0">
-              <Link href="https://gnocareerguide.preview.softr.app/?t=1657898150983">
-                <a
-                  className="text-darkBlue font-bold mx-2"
-                  href="https://gnocareerguide.preview.softr.app/?t=1657898150983"
-                  target="_blank"
+          <nav
+            className={`max-w-full flex-1 lg:flex-none lg:w-[400px] xl:w-[500px] mx-2 lg:py-0 py-4 z-20 ${
+              navIsOpen ? 'block' : 'lg:block hidden'
+            }`}
+          >
+            <ul
+              className={`flex flex-col lg:flex-row lg:items-center justify-between lg:relative absolute left-0 right-0 bg-white lg:shadow-none shadow-sm lg:px-0 lg:py-0 py-4 px-8 ${
+                navIsOpen ? 'flex' : 'lg:flex hidden'
+              }`}
+            >
+              <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray">
+                <Link href="/training/careers">Careers</Link>
+              </li>
+              <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray">
+                <Link href="/training">Trainings</Link>
+              </li>
+              <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray">
+                <Link href="https://gnoresourcehub.wherewego.org">
+                  <a
+                    href="https://gnoresourcehub.wherewego.org"
+                    target="_blank"
+                  >
+                    Resources
+                  </a>
+                </Link>
+              </li>
+              <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray cursor-pointer">
+                <Link
+                  href="/training/profile"
+                  tabIndex={0}
+                  className="font-bold"
                 >
-                  Resource Hub
-                </a>
-              </Link>
-            </li>
-            <li className="px-4 py-2 lg:p-0">
-              <Link href="/training/profile">
-                <a className="text-darkBlue font-bold mx-2" href="#">
                   My Account
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
   );
