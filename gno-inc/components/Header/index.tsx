@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Menu from '../icons/Menu';
-import MenuIcon from '../icons/Menu';
 
 interface HeaderProps {}
 
@@ -16,14 +15,14 @@ const Header: React.FC<HeaderProps> = () => {
               <img
                 src="https://res.cloudinary.com/wherewego/image/upload/v1659121705/WWG2000%20Site%20Photos/r9h92lcprtcnxft4sv9l.png"
                 alt="GNO. Inc, WhereWeGo Louisiana CareerGuide"
-                className="w-3/4 lg:w-[500px] object-contain mx-0 block"
+                className="lg:w-[500px] object-contain mx-0 block"
               />
             </a>
             <Menu
               onClick={() => {
                 setNavIsOpen(!navIsOpen);
               }}
-              className="block lg:hidden h-6 w-6 stroke-darkBlue ml-auto"
+              className="block lg:hidden h-6 w-6 stroke-darkBlue ml-auto stroke-1"
             />
           </div>
 

@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10 lg:gap-20">
           <div className="md:py-10 grid grid-rows-3 items-center">
-            <img className="w-3/4" src="images/gno-white-logo@2x.png" />
+            <img className="w-3/4 md:mx-0 mx-auto" src="images/gno-white-logo@2x.png" />
             <p className="lg:text-sm md:text-xs text-base md:text-left text-center text-white py-4">
               Greater New Orleans, Inc. is the regional economic development
               nonprofit organization serving the 10-parish region of Southwest
@@ -83,7 +83,7 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
           </div>
           <div className="md:py-10 grid grid-rows-3 items-center">
-            <img className="w-2/4" src="images/Wherewego@2x.png" />
+            <img className="w-2/4 md:mx-0 mx-auto" src="images/Wherewego@2x.png" />
             <p className="text-white py-4 lg:text-sm md:text-xs text-base md:text-left text-center">
               WhereWeGo is an EdTech and Design Thinking company based in New
               Orleans that increases access to careers, credentials, and
