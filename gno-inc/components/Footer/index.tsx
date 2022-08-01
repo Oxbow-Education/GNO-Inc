@@ -6,7 +6,7 @@ const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="bg-darkBlue p-10">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 border-b-1 border-white/50 border-solid pb-6 md:pb-0">
+        <div className="flex md:flex-row flex-col justify-between border-b-1 border-white/50 border-solid pb-6 md:pb-0">
           <Link href="/training/careers">
             <a
               href="/training/careers"
