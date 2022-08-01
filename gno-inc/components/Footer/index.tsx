@@ -6,7 +6,7 @@ const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="bg-darkBlue p-10">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 border-b-1 border-white/50 border-solid pb-6 md:pb-0">
+        <div className="flex md:flex-row flex-col justify-between border-b-1 border-white/50 border-solid pb-6 md:pb-0">
           <Link href="/training/careers">
             <a
               href="/training/careers"
@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10 lg:gap-20">
           <div className="md:py-10 grid grid-rows-3 items-center">
-            <img className="w-3/4" src="images/gno-white-logo@2x.png" />
+            <img className="w-3/4 md:mx-0 mx-auto" src="images/gno-white-logo@2x.png" />
             <p className="lg:text-sm md:text-xs text-base md:text-left text-center text-white py-4">
               Greater New Orleans, Inc. is the regional economic development
               nonprofit organization serving the 10-parish region of Southwest
@@ -83,7 +83,7 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
           </div>
           <div className="md:py-10 grid grid-rows-3 items-center">
-            <img className="w-2/4" src="images/Wherewego@2x.png" />
+            <img className="w-2/4 md:mx-0 mx-auto" src="images/Wherewego@2x.png" />
             <p className="text-white py-4 lg:text-sm md:text-xs text-base md:text-left text-center">
               WhereWeGo is an EdTech and Design Thinking company based in New
               Orleans that increases access to careers, credentials, and
@@ -93,7 +93,7 @@ const Footer: React.FC<FooterProps> = () => {
               <div className="flex-1">
                 <Link href="mailto:info@wherewego.org">
                   <a
-                    className="w-full block text-white underline font-semibold text-left hover:text-gray"
+                    className="w-full block text-white underline font-semibold text-center md:text-left hover:text-gray"
                     href="mailto:info@wherewego.org"
                     target="_blank"
                   >

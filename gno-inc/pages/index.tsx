@@ -41,7 +41,7 @@ export default Home;
 
 const Banner = () => {
   return (
-    <div className="lg:h-screen py-[100px]">
+    <div className=" md:h-[80vh] md:py-0 py-10">
       <div className="container mx-auto h-full relative px-10">
         <div className="md:grid grid-cols-2 items-center h-full">
           <div className="flex h-full flex-col justify-center md:-mr-18">
@@ -63,9 +63,9 @@ const Banner = () => {
               </Link>
             </div>
           </div>
-          <div className="flex justify-end flex-col h-full md:-ml-20">
+          <div className="flex justify-center flex-col h-full xl:-ml-10">
             <img
-              className="object-contain w-full"
+              className="object-contain w-[90%]"
               src="https://res.cloudinary.com/wherewego/image/upload/v1657317389/WWG2000%20Site%20Photos/hl6bljfiwtgv3vabmonk.png"
               alt="Images works in the technology and skilled trades industries"
             />
