@@ -93,7 +93,7 @@ const Footer: React.FC<FooterProps> = () => {
               <div className="flex-1">
                 <Link href="mailto:info@wherewego.org">
                   <a
-                    className="w-full block text-white underline font-semibold text-left hover:text-gray"
+                    className="w-full block text-white underline font-semibold text-center md:text-left hover:text-gray"
                     href="mailto:info@wherewego.org"
                     target="_blank"
                   >
