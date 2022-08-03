@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = () => {
               }`}
             >
               <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray">
-                <Link href="/training/careers">Careers</Link>
+                <Link href="/careerguide">Careers</Link>
               </li>
               <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray">
                 <Link href="/training">Trainings</Link>
@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = () => {
               </li>
               <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray cursor-pointer">
                 <Link
-                  href="/training/profile?ref=c"
+                  href="/profile?ref=c"
                   tabIndex={0}
                   className="font-bold"
                 >

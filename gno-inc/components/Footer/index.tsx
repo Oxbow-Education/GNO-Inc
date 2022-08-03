@@ -7,9 +7,9 @@ const Footer: React.FC<FooterProps> = () => {
     <footer className="bg-darkBlue p-10">
       <div className="container mx-auto">
         <div className="flex md:flex-row flex-col justify-between border-b-1 border-white/50 border-solid pb-6 md:pb-0">
-          <Link href="/training/careers">
+          <Link href="/careerguide">
             <a
-              href="/training/careers"
+              href="/careerguide"
               target="_blank"
               className="text-center text-white py-2 font-semibold text-base hover:text-gray"
             >
@@ -34,9 +34,9 @@ const Footer: React.FC<FooterProps> = () => {
               Browse Resources
             </a>
           </Link>
-          <Link href="/training/careers/quiz">
+          <Link href="/careerguide/quiz">
             <a
-              href="/training/careers/quiz"
+              href="/careerguide/quiz"
               target="_blank"
               className="text-center text-white py-2 font-semibold text-base hover:text-gray"
             >
