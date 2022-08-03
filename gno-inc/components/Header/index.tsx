@@ -37,10 +37,10 @@ const Header: React.FC<HeaderProps> = () => {
               }`}
             >
               <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray">
-                <Link href="/careerguide">Careers</Link>
+                <Link href="https://gno.wherewego.org/careerguide">Careers</Link>
               </li>
               <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray">
-                <Link href="/training">Trainings</Link>
+                <Link href="https://gno.wherewego.org/training">Trainings</Link>
               </li>
               <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray">
                 <Link href="https://gnoresourcehub.wherewego.org">
@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = () => {
               </li>
               <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray cursor-pointer">
                 <Link
-                  href="/profile?ref=c"
+                  href="https://gno.wherewego.org/profile?ref=c"
                   tabIndex={0}
                   className="font-bold"
                 >

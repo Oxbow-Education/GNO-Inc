@@ -7,18 +7,18 @@ const Footer: React.FC<FooterProps> = () => {
     <footer className="bg-darkBlue p-10">
       <div className="container mx-auto">
         <div className="flex md:flex-row flex-col justify-between border-b-1 border-white/50 border-solid pb-6 md:pb-0">
-          <Link href="/careerguide">
+          <Link href="https://gno.wherewego.org/careerguide">
             <a
-              href="/careerguide"
+              href="https://gno.wherewego.org/careerguide"
               target="_blank"
               className="text-center text-white py-2 font-semibold text-base hover:text-gray"
             >
               Browse Careers
             </a>
           </Link>
-          <Link href="/training">
+          <Link href="https://gno.wherewego.org/training">
             <a
-              href="/training"
+              href="https://gno.wherewego.org/training"
               target="_blank"
               className="text-center text-white py-2 font-semibold text-base hover:text-gray"
             >
@@ -34,9 +34,9 @@ const Footer: React.FC<FooterProps> = () => {
               Browse Resources
             </a>
           </Link>
-          <Link href="/careerguide/quiz">
+          <Link href="https://gno.wherewego.org/careerguide/quiz">
             <a
-              href="/careerguide/quiz"
+              href="https://gno.wherewego.org/careerguide/quiz"
               target="_blank"
               className="text-center text-white py-2 font-semibold text-base hover:text-gray"
             >

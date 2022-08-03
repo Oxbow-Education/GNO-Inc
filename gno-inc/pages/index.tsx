@@ -53,10 +53,10 @@ const Banner = () => {
               education pathways to get there.
             </p>
             <div className="mx-auto md:mx-0 my-8">
-              <Link href="/careerguide/quiz">
+              <Link href="https://gno.wherewego.org/careerguide/quiz">
                 <a
                   className="rounded-button bg-orange hover:bg-white border-2 border-orange border-solid hover:border-ora text-white hover:text-orange min-w-button w-[222px] max-w-full block h-button font-medium flex items-center justify-center"
-                  href="/training/careerguide/quiz"
+                  href="https://gno.wherewego.org/careerguide/quiz"
                 >
                   Take Our Short Quiz
                 </a>
@@ -228,9 +228,9 @@ const Testimonials = () => {
             </Tab.Panels>
           </Tab.Group>
         </div>
-        <Link href="/careerguide">
+        <Link href="https://gno.wherewego.org/careerguide">
           <a
-            href="/careerguide"
+            href="https://gno.wherewego.org/careerguide"
             className="my-4 md:my-10 mx-auto rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange min-w-button w-[267px] h-button font-medium max-w-full flex items-center justify-center"
           >
             Explore Careers
@@ -357,18 +357,18 @@ const CareerSwiper = () => {
               New Orleans region.
             </p>
             <div className="flex flex-col md:flex-row">
-              <Link href="/training/careerguide/quiz">
+              <Link href="https://gno.wherewego.org/careerguide/quiz">
                 <a
-                  href="/training/careerguide/quiz"
+                  href="https://gno.wherewego.org/careerguide/quiz"
                   className="rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange min-w-button w-auto block h-button font-medium mx-8 my-2 md:mr-2 flex items-center justify-center"
                 >
                   Take Our Short Quiz
                 </a>
               </Link>
-              <Link href="/training/careerguide">
+              <Link href="https://gno.wherewego.org/careerguide">
                 <a
                   className="rounded-button bg-orange hover:bg-white text-white hover:text-orange border-2 border-solid border-orange exp min-w-button w-auto block h-button font-medium mx-8 my-2 md:ml-2 flex items-center justify-center"
-                  href="/careerguide"
+                  href="https://gno.wherewego.org/careerguide"
                 >
                   See All Careers
                 </a>
