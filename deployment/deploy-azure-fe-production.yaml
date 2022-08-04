@@ -3,6 +3,21 @@ location: centralus
 name: wherewego-landing-prod
 properties:
   containers:
+  - name: nginx-with-ssl
+    properties:
+      image: mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine
+      ports:
+      - port: 443
+        protocol: TCP
+      - port: 80
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 0.5
+          memoryInGB: 1.0
+      volumeMounts:
+      - name: nginx-config
+        mountPath: /etc/nginx
   - name: staging-landing
     properties:
       image: wherewego.azurecr.io/wherewego_landing_prod:#{LND_VERSION}#
@@ -13,9 +28,17 @@ properties:
         requests:
           cpu: 0.5
           memoryInGB: 1.5
+  volumes:
+  - secret:
+      ssl.crt: #{SSL_CERT}#
+      ssl.key: #{SSL_KEY}#
+      nginx.conf: #{NGINX_CONF}#
+    name: nginx-config
   ipAddress:
     ports:
-    - port: 3006
+    - port: 443
+      protocol: TCP
+    - port: 80
       protocol: TCP
     type: Public
     dnsNameLabel: wherewego-landing
