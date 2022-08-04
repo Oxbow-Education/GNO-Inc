@@ -82,6 +82,7 @@ jobs:
     if: always()
     env:
       DEPLOY_FILE: deployment/deploy-azure-fe-production.yaml
+      NGINX_FILE: deployment/nginx-prod.conf
 
     steps:
       - name: Fail if needed jobs fail without deployonly tag
@@ -93,6 +94,9 @@ jobs:
         with:
           ref: ${{ env.BRANCH }}
           fetch-depth: 0
+
+      - name: Encode Nginx Conf
+        run: echo "NGINX_CONF=$(cat ${{ env.NGINX_FILE }} | base64 -w 0)" >> $GITHUB_ENV
 
       - name: Login via Azure CLI
         uses: azure/login@v1
@@ -111,6 +115,9 @@ jobs:
           LND_VERSION: ${{ steps.tag.outputs.tag }}
           ACR_TOKEN_NAME: ${{ secrets.ACR_TOKEN_NAME }}
           ACR_TOKEN_VALUE: ${{ secrets.ACR_TOKEN_VALUE }}
+          SSL_CERT: ${{ secrets.SSL_CERT_PROD }}
+          SSL_KEY: ${{ secrets.SSL_KEY_PROD }}
+          NGINX_CONF: ${{ env.NGINX_CONF }}
 
       - name: Deploy to Azure Container Instances
         run: az container create -g wwg --file ${{ env.DEPLOY_FILE }}
