@@ -50,7 +50,7 @@ const Footer: React.FC<FooterProps> = () => {
               className="w-[200px] object-contain"
               src="images/gno-white-logo@2x.png"
             />
-            <p className="lg:text-sm md:text-xs text-base  text-center text-white py-4">
+            <p className="lg:text-sm md:text-xs text-base text-center md:text-left text-white py-4">
               Greater New Orleans, Inc. is the regional economic development
               nonprofit organization serving the 10-parish region of Southwest
               Louisiana.
@@ -86,20 +86,10 @@ const Footer: React.FC<FooterProps> = () => {
           </div>
           <div className="md:py-10 grid grid-rows-3 items-center justify-items-center">
             <img
-              className="h-12 lg:h-16"
-              src="images/Chevron_Logo@2x.png"
-              alt="Chrevron Logo"
-            />
-            <p className="text-white text-center">
-              Powered by <br /> Chevron
-            </p>
-          </div>
-          <div className="md:py-10 grid grid-rows-3 items-center justify-center justify-items-center">
-            <img
               className="w-[200px] md:mx-0 mx-auto"
               src="images/Wherewego@2x.png"
             />
-            <p className="text-white py-4 lg:text-sm md:text-xs text-base  text-center">
+            <p className="text-white py-4 lg:text-sm md:text-xs text-base text-center md:text-left">
               WhereWeGo is an EdTech and Design Thinking company based in New
               Orleans that increases access to careers, credentials, and
               credits.
@@ -128,6 +118,18 @@ const Footer: React.FC<FooterProps> = () => {
                 </Link>
               </div>
             </div>
+          </div>
+          <div className="md:py-10 grid grid-rows-3 items-center justify-center justify-items-center">
+            <img
+              className="h-12 lg:h-16"
+              src="images/Chevron_Logo@2x.png"
+              alt="Chrevron Logo"
+            />
+            <p className="text-white text-center">
+              Powered by <br /> Chevron
+            </p>
+
+      
 
             <p className="text-white/60 md:ml-auto">
               Built by{' '}
