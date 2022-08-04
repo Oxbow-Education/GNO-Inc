@@ -11,11 +11,11 @@ const Header: React.FC<HeaderProps> = () => {
       <div className="container mx-auto px-8 py-4">
         <div className="flex lg:flex-row flex-col lg:items-center lg:justify-between">
           <div className="flex items-center justify-bewteen w-full">
-            <a href="/" className="w-3/4 lg:w-[500px]">
+            <a href="/" className="w-3/4 lg:w-[600px]">
               <img
-                src="https://res.cloudinary.com/wherewego/image/upload/v1659121705/WWG2000%20Site%20Photos/r9h92lcprtcnxft4sv9l.png"
+                src="https://res.cloudinary.com/wherewego/image/upload/v1659637898/WWG2000%20Site%20Photos/qipga6az1jvio3cchvzc.png"
                 alt="GNO. Inc, WhereWeGo Louisiana CareerGuide"
-                className="lg:w-[500px] object-contain mx-0 block"
+                className="w-full object-cover mx-0 block"
               />
             </a>
             <Menu

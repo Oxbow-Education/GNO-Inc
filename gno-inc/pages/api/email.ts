@@ -9,6 +9,7 @@ export default async function handler(
   res: NextApiResponse<Data>,
 ) {
   const { body } = req;
+
   sendEmail(body)
     .then(() => {
       res.status(200);
