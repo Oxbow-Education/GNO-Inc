@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = () => {
           <div className="flex items-center justify-bewteen w-full">
             <a href="/" className="w-3/4 lg:w-[600px]">
               <img
-                src="https://res.cloudinary.com/wherewego/image/upload/v1659637898/WWG2000%20Site%20Photos/qipga6az1jvio3cchvzc.png"
+                src="https://res.cloudinary.com/wherewego/image/upload/v1659638814/WWG2000%20Site%20Photos/dofesapf2hufc3m4pjlk.png"
                 alt="GNO. Inc, WhereWeGo Louisiana CareerGuide"
                 className="w-full object-cover mx-0 block"
               />
