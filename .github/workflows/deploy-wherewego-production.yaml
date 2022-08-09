@@ -59,7 +59,7 @@ jobs:
         uses: timheuer/base64-to-file@v1.1
         with:
           fileName: '.env'
-          fileDir: './project-connect/'
+          fileDir: './gno-inc/'
           encodedString: ${{ secrets[env.ENCODED_ENV_KEY] }}
 
       - name: 'Get Latest tag'
