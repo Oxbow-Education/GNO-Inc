@@ -138,6 +138,7 @@ const Testimonials = () => {
                     <img
                       src="images/small-green-dotted@2x.png"
                       className="absolute bottom-0 left-0 w-32  z-0"
+                      alt='Small Green Dot'
                     />
                     <img
                       className="z-10 relative h-[434px] object-cover rounded-testimonialsImage"
@@ -150,12 +151,12 @@ const Testimonials = () => {
                     <p className="text-darkBlue text-lg font-semibold text-center">
                       Tulane Graduate
                     </p>
-                    <img className="my-2 h-16" src="images/down-arrow.png" />
+                    <img className="my-2 h-16" src="images/down-arrow.png" alt='Down Arrow' />
                     <h3 className="text-darkBlue text-4xl font-medium">2021</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
                       Ad Agency Internship
                     </p>
-                    <img className="my-2 h-16" src="images/down-arrow.png" />
+                    <img className="my-2 h-16" src="images/down-arrow.png" alt='Down Arrow'/>
                     <h3 className="text-darkBlue text-4xl font-medium">2022</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
                       Full Time Graphic Designer
@@ -168,6 +169,7 @@ const Testimonials = () => {
                   <div className="relative py-10 px-6">
                     <img
                       src="images/small-green-dotted@2x.png"
+                      alt='Small Green Dot'
                       className="absolute bottom-0 left-0 w-32  z-0"
                     />
                     <img
@@ -181,12 +183,12 @@ const Testimonials = () => {
                     <p className="text-darkBlue text-lg font-semibold text-center">
                       Nunez Community College Graduate
                     </p>
-                    <img className="my-2 h-16" src="images/down-arrow.png" />
+                    <img className="my-2 h-16" src="images/down-arrow.png" alt='Down Arrow'/>
                     <h3 className="text-darkBlue text-4xl font-medium">2021</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
                       Welding Apprenticeship
                     </p>
-                    <img className="my-2 h-16" src="images/down-arrow.png" />
+                    <img className="my-2 h-16" src="images/down-arrow.png" alt='Down Arrow' />
                     <h3 className="text-darkBlue text-4xl font-medium">2022</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
                       Full Time Welding Professional & Company owner
@@ -199,6 +201,7 @@ const Testimonials = () => {
                   <div className="relative py-10 px-6">
                     <img
                       src="images/small-green-dotted@2x.png"
+                      alt='Small Green Dot'
                       className="absolute bottom-0 left-0 w-32  z-0"
                     />
                     <img
@@ -212,12 +215,12 @@ const Testimonials = () => {
                     <p className="text-darkBlue text-lg font-semibold text-center">
                       UNO Graduate
                     </p>
-                    <img className="my-2 h-16" src="images/down-arrow.png" />
+                    <img className="my-2 h-16" src="images/down-arrow.png" alt='Down Arrow' />
                     <h3 className="text-darkBlue text-4xl font-medium">2019</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
                       Hancock Whitney Entry Level Accountant
                     </p>
-                    <img className="my-2 h-16" src="images/down-arrow.png" />
+                    <img className="my-2 h-16" src="images/down-arrow.png" alt='Down Arrow' />
                     <h3 className="text-darkBlue text-4xl font-medium">2022</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
                       EY Manager
@@ -299,6 +302,7 @@ const CareerSwiper = () => {
             <img
               className="absolute top-0 left-0 h-[73%] w-3/4 object-contain"
               src="images/blue-dotted-background@2x.png"
+              alt='Blue Dotted Background'
             />
             <BrowserOnly>
               <Swiper
@@ -313,13 +317,13 @@ const CareerSwiper = () => {
                 loop={true}
               >
                 <SwiperSlide>
-                  <img src="images/tulane-litigation@2x.png" />
+                  <img src="images/tulane-litigation@2x.png" alt='Tulane Litigation'/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="images/nocc-electrician@2x.png" />
+                  <img src="images/nocc-electrician@2x.png" alt='Nocc Electrician'/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="images/uno-business@2x.png" />
+                  <img src="images/uno-business@2x.png" alt='UNO Business' />
                 </SwiperSlide>
                 <div className="flex items-center navigation my-6 md:my-0">
                   <div
@@ -539,6 +543,7 @@ const ContactForm = () => {
             <img
               className="object-contain max-h-[500px] mx-auto"
               src="images/email-graphic@2x.png"
+              alt='Email Logo'
             />
           </div>
         </div>
@@ -547,6 +552,7 @@ const ContactForm = () => {
           <img
             className="block object-contain xl:relative absolute inset-4 xl:inset-0 xl:w-auto w-5/6"
             src="images/email-graphic@2x.png"
+            alt='Email Logo'
           />
         </div>
       </div>

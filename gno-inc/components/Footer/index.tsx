@@ -49,6 +49,7 @@ const Footer: React.FC<FooterProps> = () => {
             <img
               className="w-[200px] object-contain"
               src="images/gno-white-logo@2x.png"
+              alt='GNO White Logo'
             />
             <p className="lg:text-sm md:text-xs text-base text-center md:text-left text-white py-4">
               Greater New Orleans, Inc. is the regional economic development
@@ -88,6 +89,7 @@ const Footer: React.FC<FooterProps> = () => {
             <img
               className="w-[200px] md:mx-0 mx-auto"
               src="images/Wherewego@2x.png"
+              alt='WhereWeGo Logo'
             />
             <p className="text-white py-4 lg:text-sm md:text-xs text-base text-center md:text-left">
               WhereWeGo is an EdTech and Design Thinking company based in New
