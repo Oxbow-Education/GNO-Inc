@@ -5,7 +5,7 @@ interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="bg-darkBlue p-10">
-      <div className="container mx-auto">
+      <section className="container mx-auto">
         <div className="flex md:flex-row flex-col justify-between border-b-1 border-white/50 border-solid pb-6 md:pb-0">
           <Link href="https://gno.wherewego.org/careerguide">
             <a
@@ -49,6 +49,7 @@ const Footer: React.FC<FooterProps> = () => {
             <img
               className="w-[200px] object-contain"
               src="images/gno-white-logo@2x.png"
+              alt='GNO White Logo'
             />
             <p className="lg:text-sm md:text-xs text-base text-center md:text-left text-white py-4">
               Greater New Orleans, Inc. is the regional economic development
@@ -88,6 +89,7 @@ const Footer: React.FC<FooterProps> = () => {
             <img
               className="w-[200px] md:mx-0 mx-auto"
               src="images/Wherewego@2x.png"
+              alt='WhereWeGo Logo'
             />
             <p className="text-white py-4 lg:text-sm md:text-xs text-base text-center md:text-left">
               WhereWeGo is an EdTech and Design Thinking company based in New
@@ -146,7 +148,7 @@ const Footer: React.FC<FooterProps> = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </footer>
   );
 };
