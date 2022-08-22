@@ -41,7 +41,7 @@ export default Home;
 
 const Banner = () => {
   return (
-    <div className="md:h-[80vh] md:py-0 py-10">
+    <section className="md:h-[80vh] md:py-0 py-10">
       <div className="container mx-auto h-full relative px-10">
         <div className="md:grid grid-cols-2 items-center h-full">
           <div className="flex h-full flex-col justify-center md:-mr-18">
@@ -63,21 +63,21 @@ const Banner = () => {
               </Link>
             </div>
           </div>
-          <div className="flex justify-center flex-col h-full xl:-ml-10">
+          <figure className="flex justify-center flex-col h-full xl:-ml-10">
             <img
               className="object-contain w-[90%]"
               src="https://res.cloudinary.com/wherewego/image/upload/v1657317389/WWG2000%20Site%20Photos/hl6bljfiwtgv3vabmonk.png"
               alt="Images works in the technology and skilled trades industries"
             />
-          </div>
+          </figure>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 const Testimonials = () => {
   return (
-    <div className="py-10 px-8 md:p-28">
+    <section className="py-10 px-8 md:p-28">
       <div className="container mx-auto">
         <h2 className="text-2xl leading-10 md:text-4xl text-darkBlue text-center font-semibold pb-10">
           Career Path Testimonials
@@ -134,7 +134,7 @@ const Testimonials = () => {
             <Tab.Panels>
               <Tab.Panel>
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="relative py-10 px-6">
+                  <figure className="relative py-10 px-6">
                     <img
                       src="images/small-green-dotted@2x.png"
                       className="absolute bottom-0 left-0 w-32  z-0"
@@ -145,7 +145,7 @@ const Testimonials = () => {
                       src="images/jessica@2x.png"
                       alt="Jessica: Graphic Designer"
                     />
-                  </div>
+                  </figure>
                   <div className="flex flex-col items-center p-10">
                     <h3 className="text-darkBlue text-4xl font-medium">2020</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
@@ -166,7 +166,7 @@ const Testimonials = () => {
               </Tab.Panel>
               <Tab.Panel>
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="relative py-10 px-6">
+                  <figure className="relative py-10 px-6">
                     <img
                       src="images/small-green-dotted@2x.png"
                       alt='Small Green Dot'
@@ -177,7 +177,7 @@ const Testimonials = () => {
                       src="https://res.cloudinary.com/wherewego/image/upload/v1659116482/WWG2000%20Site%20Photos/owmjeefomvzdb1nl2cj4.jpg"
                       alt="Richard: Welder"
                     />
-                  </div>
+                  </figure>
                   <div className="flex flex-col items-center p-10">
                     <h3 className="text-darkBlue text-4xl font-medium">2019</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
@@ -198,7 +198,7 @@ const Testimonials = () => {
               </Tab.Panel>
               <Tab.Panel>
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="relative py-10 px-6">
+                  <figure className="relative py-10 px-6">
                     <img
                       src="images/small-green-dotted@2x.png"
                       alt='Small Green Dot'
@@ -209,7 +209,7 @@ const Testimonials = () => {
                       src="https://res.cloudinary.com/wherewego/image/upload/v1659116483/WWG2000%20Site%20Photos/w8quh27lrjue8wijecwg.jpg"
                       alt="Tessa: Accountant"
                     />
-                  </div>
+                  </figure>
                   <div className="flex flex-col items-center p-10">
                     <h3 className="text-darkBlue text-4xl font-medium">2018</h3>
                     <p className="text-darkBlue text-lg font-semibold text-center">
@@ -244,7 +244,7 @@ const Testimonials = () => {
             Services to help in your education and training journey
           </h2>
           <div className="grid grid-rows-2 grid-cols-2 md:grid-rows-1 md:grid-cols-3 gap-8 max-w-full w-[1000px] mx-auto">
-            <div className="flex flex-col items-center justify-between h-full">
+            <figure className="flex flex-col items-center justify-between h-full">
               <img
                 className="md:w-40 w-28"
                 src="images/career-counseling@2x.png"
@@ -253,8 +253,8 @@ const Testimonials = () => {
               <h3 className="text-darkBlue text-base md:text-2xl text-center font-bold py-6">
                 Career Counseling
               </h3>
-            </div>
-            <div className="flex flex-col items-center justify-between h-full">
+            </figure>
+            <figure className="flex flex-col items-center justify-between h-full">
               <img
                 className="md:w-40 w-28"
                 src="images/childcare@2x.png"
@@ -263,8 +263,8 @@ const Testimonials = () => {
               <h3 className="text-darkBlue text-base md:text-2xl text-center font-bold py-6">
                 Childcare
               </h3>
-            </div>
-            <div className="col-span-2 md:col-auto md:row-auto flex flex-col items-center justify-between h-full">
+            </figure>
+            <figure className="col-span-2 md:col-auto md:row-auto flex flex-col items-center justify-between h-full">
               <img
                 className="md:w-40 w-28"
                 src="images/other-support@2x.png"
@@ -273,7 +273,7 @@ const Testimonials = () => {
               <h3 className="text-darkBlue text-base md:text-2xl text-center font-bold py-6">
                 Other Support
               </h3>
-            </div>
+            </figure>
           </div>
           <Link href="https://gnoresourcehub.wherewego.org">
             <a
@@ -286,7 +286,7 @@ const Testimonials = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -295,10 +295,10 @@ const CareerSwiper = () => {
   const pathwaysPrevRef = React.useRef<HTMLDivElement>(null);
   const [swiper, setSwiper] = useState<any | null>(null);
   return (
-    <div className="bg-darkBlue py-16 px-8 md:p-28">
+    <section className="bg-darkBlue py-16 px-8 md:p-28">
       <div className="container mx-auto">
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-0 gap-8">
-          <div className="relative py-10 md:py-0 md:pr-10">
+          <figure className="relative py-10 md:py-0 md:pr-10">
             <img
               className="absolute top-0 left-0 h-[73%] w-3/4 object-contain"
               src="images/blue-dotted-background@2x.png"
@@ -348,7 +348,7 @@ const CareerSwiper = () => {
                 </div>
               </Swiper>
             </BrowserOnly>
-          </div>
+          </figure>
           <div className="w-full flex flex-col justify-center lg:pl-10">
             <h2 className="text-white text-3xl md:text-4xl font-medium leading-10 md:leading-heading3 xl:leading-heading2 pb-6">
               Great Careers. <br /> Straightforward pathways.
@@ -381,7 +381,7 @@ const CareerSwiper = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -461,7 +461,7 @@ const ContactForm = () => {
 
 
   return (
-    <div className="container mx-auto my-10 md:my-10">
+    <section className="container mx-auto my-10 md:my-10">
       <div className="flex flex-col lg:grid grid-rows-contact grid-cols-contact relative">
         <div className="bg-lightBlue mx-6 px-6 pt-6 pb-0 lg:py-8 lg:px-10 2xl:p-20 col-start-1 col-end-3 row-start-2 row-end-3 rounded-2xl flex flex-col lg:grid grid-rows-1 grid-cols-contact">
           <div className="lg:pr-6">
@@ -539,23 +539,23 @@ const ContactForm = () => {
               </button>
             </form>
           </div>
-          <div className="block lg:hidden col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
+          <figure className="block lg:hidden col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
             <img
               className="object-contain max-h-[500px] mx-auto"
               src="images/email-graphic@2x.png"
               alt='Email Logo'
             />
-          </div>
+          </figure>
         </div>
 
-        <div className="relative hidden w-full lg:block col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
+        <figure className="relative hidden w-full lg:block col-start-2 col-end-3 row-start-1 row-end-3 px-10 w-auto">
           <img
             className="block object-contain xl:relative absolute inset-4 xl:inset-0 xl:w-auto w-5/6"
             src="images/email-graphic@2x.png"
             alt='Email Logo'
           />
-        </div>
+        </figure>
       </div>
-    </div>
+    </section>
   );
 };
