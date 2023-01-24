@@ -8,21 +8,21 @@ const Header: React.FC<HeaderProps> = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
   return (
     <header>
-      <div className="container mx-auto px-8 py-4">
-        <div className="flex lg:flex-row flex-col lg:items-center lg:justify-between">
-          <div className="flex items-center justify-bewteen w-full">
+      <div className="container px-8 py-4 mx-auto">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex items-center w-full justify-bewteen">
             <a href="/" className="w-3/4 lg:w-[600px]">
               <img
-                src="https://res.cloudinary.com/wherewego/image/upload/v1659638814/WWG2000%20Site%20Photos/dofesapf2hufc3m4pjlk.png"
+                src="https://res.cloudinary.com/wherewego/image/upload/v1674576215/WWG2000%20Site%20Photos/idmev84lotyxkm4cgnlu.png"
                 alt="GNO. Inc, WhereWeGo Louisiana CareerGuide"
-                className="w-full object-cover mx-0 block"
+                className="block object-cover w-full mx-0"
               />
             </a>
             <Menu
               onClick={() => {
                 setNavIsOpen(!navIsOpen);
               }}
-              className="block lg:hidden h-6 w-6 stroke-darkBlue ml-auto stroke-1"
+              className="block w-6 h-6 ml-auto stroke-1 lg:hidden stroke-darkBlue"
             />
           </div>
 
@@ -36,13 +36,13 @@ const Header: React.FC<HeaderProps> = () => {
                 navIsOpen ? 'flex' : 'lg:flex hidden'
               }`}
             >
-              <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray">
+              <li className="p-2 text-lg font-semibold text-darkBlue lg:p-0 hover:text-gray">
                 <Link href="https://gno.wherewego.org/careerguide">Careers</Link>
               </li>
-              <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray">
+              <li className="p-2 text-lg font-semibold text-darkBlue lg:p-0 hover:text-gray">
                 <Link href="https://gno.wherewego.org/training">Trainings</Link>
               </li>
-              <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray">
+              <li className="p-2 text-lg font-semibold text-darkBlue lg:p-0 hover:text-gray">
                 <Link href="https://gnoresourcehub.wherewego.org">
                   <a
                     href="https://gnoresourcehub.wherewego.org"
@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = () => {
                   </a>
                 </Link>
               </li>
-              <li className="text-darkBlue font-semibold text-lg lg:p-0 p-2 hover:text-gray cursor-pointer">
+              <li className="p-2 text-lg font-semibold cursor-pointer text-darkBlue lg:p-0 hover:text-gray">
                 <Link
                   href="https://gno.wherewego.org/profile?ref=c"
                   tabIndex={0}
