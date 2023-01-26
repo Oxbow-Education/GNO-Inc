@@ -90,8 +90,8 @@ jobs:
       - name: Restart containers
         run: az container restart -g wwg --name wherewegocms-with-ssl
 
-      - name: Purge old images from registry
-        run: az acr run -g wwg --cmd "${{ env.purge_cmd }}" --registry wherewego  --timeout 360 /dev/null
-        env:
-          # TODO - Update number for keep once we begin versioning
-          purge_cmd: "acr purge --filter 'wwg_gno:.*' --ago 90d --keep 2 --untagged"
+      # - name: Purge old images from registry
+      #   run: az acr run -g wwg --cmd "${{ env.purge_cmd }}" --registry wherewego  --timeout 360 /dev/null
+      #   env:
+      #     # TODO - Update number for keep once we begin versioning
+      #     purge_cmd: "acr purge --filter 'wwg_gno:.*' --ago 90d --keep 2 --untagged"
