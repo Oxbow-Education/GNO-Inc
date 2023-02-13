@@ -62,6 +62,14 @@ jobs:
           fileDir: './gno-inc/'
           encodedString: ${{ secrets[env.ENCODED_ENV_KEY] }}
 
+      - name: 'Replace variables in update_probes script'
+        uses: cschleiden/replace-tokens@v1
+        with:
+          files: "deployment/update_probes.sh"
+        env:
+          PROBE_KEY: ${{ secrets.PROBE_KEY }}
+          BRANCH: ${{ env.BRANCH }}
+
       - name: 'Get Latest tag'
         id: tag
         uses: "WyriHaximus/github-action-get-previous-tag@v1"

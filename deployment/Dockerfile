@@ -8,6 +8,9 @@ WORKDIR /app
 COPY ./gno-inc/package*.json ./
 RUN yarn
 
+# Copy over script for updating health probes
+COPY ./deployment/update_probes.sh ./
+
 # Copy over rest of the source and build
 COPY ./gno-inc ./
 RUN yarn build
@@ -18,4 +21,4 @@ WORKDIR /app
 
 EXPOSE 3006
 # Run the server
-CMD ["yarn", "start"]
+CMD ./update_probes.sh wherewego landing & yarn start
