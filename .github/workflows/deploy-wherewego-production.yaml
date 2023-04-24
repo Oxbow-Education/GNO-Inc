@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ env.BRANCH }}
           fetch-depth: 0
@@ -49,14 +49,14 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ env.BRANCH }}
           fetch-depth: 0
 
       - name: Decode and write env file
         id: write_env
-        uses: timheuer/base64-to-file@v1.1
+        uses: timheuer/base64-to-file@v1.2
         with:
           fileName: '.env'
           fileDir: './gno-inc/'
@@ -97,7 +97,7 @@ jobs:
         run: exit 1
 
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ env.BRANCH }}
           fetch-depth: 0
