@@ -23,4 +23,4 @@ WORKDIR /app
 EXPOSE 3006
 ENV PROJECT_ENV=${PROJECT_ENV}
 # Run the server
-CMD ./update_ip.sh wherewego landing ${PROJECT_ENV} & yarn start
+CMD ./update_ip.sh wherewego landing ${PROJECT_ENV} && yarn start
