@@ -10,38 +10,12 @@ on:
 env:
   BRANCH: main
   PROJECT_ENV: production
+  TAG_PREFIX: v
 
 jobs:
-  tag_version:
+  tag_and_build:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '#deployonly')"
-
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ env.BRANCH }}
-          fetch-depth: 0
-
-      - name: Git Version
-        id: semvar
-        uses: paulhatch/semantic-version@v4.0.3
-        with:
-          tag_prefix: "v"
-          format: "${major}.${minor}.${patch}"
-
-      - name: Tag main branch with latest version
-        uses: pkgdeps/git-tag-action@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          github_repo: ${{ github.repository }}
-          git_commit_sha: ${{ github.sha }}
-          version: "${{ steps.semvar.outputs.version_tag }}"
-
-  build_landing:
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '#deployonly')"
-    needs: tag_version
     env:
       REPO: wherewego_landing_prod
       DOCKERFILE: ./deployment/Dockerfile
@@ -54,6 +28,21 @@ jobs:
           ref: ${{ env.BRANCH }}
           fetch-depth: 0
 
+      - name: Git Version
+        id: semvar
+        uses: paulhatch/semantic-version@v5.0.3
+        with:
+          tag_prefix: "${{ env.TAG_PREFIX }}"
+          version_format: "${major}.${minor}.${patch}"
+
+      - name: Tag main branch with latest version
+        uses: pkgdeps/git-tag-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_repo: ${{ github.repository }}
+          git_commit_sha: ${{ github.sha }}
+          version: "${{ steps.semvar.outputs.version_tag }}"
+
       - name: Decode and write env file
         id: write_env
         uses: timheuer/base64-to-file@v1.2
@@ -62,13 +51,12 @@ jobs:
           fileDir: './gno-inc/'
           encodedString: ${{ secrets[env.ENCODED_ENV_KEY] }}
 
-      - name: 'Replace variables in update_probes script'
+      - name: 'Replace variables in update_ip script'
         uses: cschleiden/replace-tokens@v1
         with:
-          files: "deployment/update_probes.sh"
+          files: "deployment/update_ip.sh"
         env:
-          PROBE_KEY: ${{ secrets.PROBE_KEY }}
-          BRANCH: ${{ env.BRANCH }}
+          IP_KEY: ${{ secrets.IP_KEY }}
 
       - name: 'Get Latest tag'
         id: tag
@@ -83,6 +71,8 @@ jobs:
           repo: ${{ env.REPO }}
           dockerfile: ${{ env.DOCKERFILE }}
           version_tag: ${{ steps.tag.outputs.tag }}
+          build_args: |
+            PROJECT_ENV=${{ env.PROJECT_ENV }}
 
   deploy_group:
     runs-on: ubuntu-latest
@@ -102,14 +92,16 @@ jobs:
           ref: ${{ env.BRANCH }}
           fetch-depth: 0
 
+      - name: 'Get Latest tag'
+        id: tag
+        run: |
+          TAG=$(git describe --abbrev=0 --match "${{ env.TAG_PREFIX }}*")
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+
       - name: Login via Azure CLI
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: 'Get Latest tag'
-        id: tag
-        uses: "WyriHaximus/github-action-get-previous-tag@v1"
 
       - name: 'Replace variables in deployment script'
         uses: cschleiden/replace-tokens@v1
@@ -119,6 +111,8 @@ jobs:
           LND_VERSION: ${{ steps.tag.outputs.tag }}
           ACR_TOKEN_NAME: ${{ secrets.ACR_TOKEN_NAME }}
           ACR_TOKEN_VALUE: ${{ secrets.ACR_TOKEN_VALUE }}
+          LOG_ANALYTICS_WORKSPACE_ID: ${{ secrets.LOG_ANALYTICS_WORKSPACE_ID }}
+          LOG_ANALYTICS_WORKSPACE_KEY: ${{ secrets.LOG_ANALYTICS_WORKSPACE_KEY }}
 
       - name: Deploy to Azure Container Instances
         run: az container create -g wwg --file ${{ env.DEPLOY_FILE }}
