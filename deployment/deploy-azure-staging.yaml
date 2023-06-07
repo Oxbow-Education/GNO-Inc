@@ -1,9 +1,9 @@
 api-version: 2019-12-01
 location: centralus
-name: wherewegocms-with-ssl
+name: wherewego-staging
 properties:
   containers:
-  - name: nginx-with-ssl
+  - name: nginx
     properties:
       image: mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine
       ports:
@@ -60,20 +60,18 @@ properties:
           memoryInGB: 1.0
   volumes:
   - secret:
-      ssl.crt: #{SSL_CERT}#
-      ssl.key: #{SSL_KEY}#
       nginx.conf: #{NGINX_CONF}#
     name: nginx-config
   ipAddress:
     ports:
-    - port: 443
-      protocol: TCP
     - port: 80
       protocol: TCP
-    type: Public
-    dnsNameLabel: admincms
+    type: Private
   osType: Linux
   restartPolicy: OnFailure
+  subnetIds:
+    - id: "/subscriptions/761e843c-f54e-4d02-b369-2dbf9b900a21/resourceGroups/WWG/providers/Microsoft.Network/virtualNetworks/wherewego-prod-vnet/subnets/staging"
+      name: staging
   imageRegistryCredentials:
     - server: wherewego.azurecr.io
       username: #{ACR_TOKEN_NAME}#

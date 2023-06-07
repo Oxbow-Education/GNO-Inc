@@ -34,6 +34,13 @@ jobs:
           fileDir: './gno-inc/'
           encodedString: ${{ secrets[env.ENCODED_ENV_KEY] }}
 
+      - name: 'Replace variables in update_ip script'
+        uses: cschleiden/replace-tokens@v1
+        with:
+          files: "deployment/update_ip.sh"
+        env:
+          IP_KEY: ${{ secrets.IP_KEY }}
+
       - name: Build and push image to registry
         uses: nikkag/build-docker-push-azure-action@main
         with:
@@ -43,6 +50,8 @@ jobs:
           repo: ${{ env.REPO }}
           dockerfile: ${{ env.DOCKERFILE }}
           version_tag: latest
+          build_args: |
+            PROJECT_ENV=${{ env.BRANCH }}
 
   deploy_group:
     runs-on: ubuntu-latest
@@ -77,8 +86,6 @@ jobs:
           files: "${{ env.DEPLOY_FILE }}"
         env:
           GNO_VERSION: latest
-          SSL_CERT: ${{ secrets.SSL_CERT }}
-          SSL_KEY: ${{ secrets.SSL_KEY }}
           ACR_TOKEN_NAME: ${{ secrets.ACR_TOKEN_NAME }}
           ACR_TOKEN_VALUE: ${{ secrets.ACR_TOKEN_VALUE }}
           NGINX_CONF: ${{ env.NGINX_CONF }}
@@ -88,7 +95,7 @@ jobs:
 
       # Remove below when we start versioning
       - name: Restart containers
-        run: az container restart -g wwg --name wherewegocms-with-ssl
+        run: az container restart -g wwg --name wherewego-staging
 
       - name: Purge old images from registry
         run: az acr run -g wwg --cmd "${{ env.purge_cmd }}" --registry wherewego  --timeout 360 /dev/null

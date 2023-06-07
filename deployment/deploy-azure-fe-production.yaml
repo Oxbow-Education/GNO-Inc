@@ -17,10 +17,16 @@ properties:
     ports:
     - port: 3006
       protocol: TCP
-    type: Public
-    dnsNameLabel: wherewego-landing
+    type: Private
+  subnetIds:
+    - id: "/subscriptions/761e843c-f54e-4d02-b369-2dbf9b900a21/resourceGroups/WWG/providers/Microsoft.Network/virtualNetworks/wherewego-prod-vnet/subnets/backend"
+      name: backend
   osType: Linux
   restartPolicy: OnFailure
+  diagnostics:
+    logAnalytics:
+      workspaceId: #{LOG_ANALYTICS_WORKSPACE_ID}#
+      workspaceKey: #{LOG_ANALYTICS_WORKSPACE_KEY}#
   imageRegistryCredentials:
     - server: wherewego.azurecr.io
       username: #{ACR_TOKEN_NAME}#
