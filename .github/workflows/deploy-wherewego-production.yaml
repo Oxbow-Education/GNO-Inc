@@ -58,10 +58,6 @@ jobs:
         env:
           IP_KEY: ${{ secrets.IP_KEY }}
 
-      - name: 'Get Latest tag'
-        id: tag
-        uses: "WyriHaximus/github-action-get-previous-tag@v1"
-
       - name: Build and push image to registry
         uses: nikkag/build-docker-push-azure-action@main
         with:
@@ -70,7 +66,7 @@ jobs:
           registry: wherewego
           repo: ${{ env.REPO }}
           dockerfile: ${{ env.DOCKERFILE }}
-          version_tag: ${{ steps.tag.outputs.tag }}
+          version_tag: ${{ steps.semvar.outputs.version_tag }}
           build_args: |
             PROJECT_ENV=${{ env.PROJECT_ENV }}
 
